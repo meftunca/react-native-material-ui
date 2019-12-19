@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.tsx"],"names":["Image","Icon"],"mappings":"qKAAA,4DACA,0D,aAEe,CAACA,KAAK,CAALA,KAAD,CAAQC,IAAI,CAAJA,IAAR,C","sourcesContent":["import * as Image from './AvatarImage';\nimport * as Icon from './AvatarIcon';\n\nexport default {Image, Icon};\n"]}

@@ -1,0 +1,19 @@
+import React from 'react';
+import IconButton, {IconButtonProps} from '../Buttons/IconButton';
+const Action: React.FC<IconButtonProps> = ({
+  contentContainerStyle,
+  ...buttonProps
+}) => {
+  return (
+    <IconButton
+      {...buttonProps}
+      contentContainerStyle={[
+        {marginRight: 12, marginLeft: 0},
+        contentContainerStyle,
+      ]}
+    />
+  );
+};
+Action.displayName = 'Action';
+
+export default Action;

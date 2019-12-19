@@ -1,0 +1,4 @@
+import * as Image from './AvatarImage';
+import * as Icon from './AvatarIcon';
+
+export default {Image, Icon};

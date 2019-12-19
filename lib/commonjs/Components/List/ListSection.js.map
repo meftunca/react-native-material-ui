@@ -1,0 +1,1 @@
+{"version":3,"sources":["ListSection.tsx"],"names":[],"mappings":"mKAAA,oD,aAEe,mBAAM,CACnB,MAAO,2DAAP,CACD,C","sourcesContent":["import React from 'react';\n\nexport default () => {\n  return <></>;\n};\n"]}

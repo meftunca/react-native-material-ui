@@ -1,0 +1,118 @@
+{
+  "name": "reactNativeMUI",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "compile": "bob build",
+    "android": "react-native run-android",
+    "storybook": "start-storybook -p 9009 -c .storybook",
+    "build:storybook": "build-storybook -c .storybook -o doc",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "build-storybook": "build-storybook"
+  },
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
+  "react-native": "./lib/commonjs/index.js",
+  "types": "./lib/typescript/src/index.d.ts",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "rnpm": {
+    "assets": [
+      "./src/Fonts/Roboto"
+    ]
+  },
+  "dependencies": {
+    "@callstack/react-theme-provider": "^3.0.5",
+    "color": "^3.1.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.5",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-flow": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/runtime": "^7.7.7",
+    "@react-native-community/bob": "^0.7.0",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "@react-native-community/masked-view": "^0.1.5",
+    "@react-navigation/bottom-tabs": "^5.0.0-alpha.24",
+    "@react-navigation/core": "^5.0.0-alpha.27",
+    "@react-navigation/drawer": "^5.0.0-alpha.26",
+    "@react-navigation/native": "^5.0.0-alpha.17",
+    "@react-navigation/stack": "^5.0.0-alpha.42",
+    "@types/jest": "^24.0.24",
+    "@types/react": "^16.9.16",
+    "@types/react-native": "^0.60.25",
+    "@types/react-native-vector-icons": "^6.4.4",
+    "@types/react-test-renderer": "16.9.1",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-react-native-web": "^0.11.7",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.57.0",
+    "module-alias": "^2.2.2",
+    "react": "16.12.0",
+    "react-native": "0.61.5",
+    "react-native-gesture-handler": "^1.5.2",
+    "react-native-reanimated": "^1.4.0",
+    "react-native-safe-area-context": "^0.6.1",
+    "react-native-safe-area-view": "^1.0.0",
+    "react-native-screens": "^2.0.0-alpha.20",
+    "react-native-vector-icons": "^6.6.0",
+    "react-test-renderer": "16.12.0",
+    "typescript": "^3.7.3"
+  },
+  "_moduleAliases": {
+    "@devloops/rn-mui": "./src"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs",
+        {
+          "flow": true
+        }
+      ],
+      "module",
+      "typescript"
+    ]
+  },
+  "detox": {
+    "test-runner": "jest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
