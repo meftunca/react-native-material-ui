@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
-import Text from 'Components/Core/Typography';
-import Icon from 'Components/Core/Icon';
+import Text from '../Core/Typography';
+import Icon from '../Core/Icon';
 export default function BottomBar({
   helperText,
   success,

@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
-import { TextProps } from 'Components/Core/Typography';
-import { RippleProps } from 'Components/Core/Ripple';
-import { ThemeTypes } from 'Theming';
+import { TextProps } from '../Core/Typography';
+import { RippleProps } from '../Core/Ripple';
+import { ThemeTypes } from '../../Theming';
 declare type listHorizontalItemType = (props: {
     color?: string;
     size?: number;

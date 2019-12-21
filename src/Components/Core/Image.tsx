@@ -11,7 +11,7 @@ import {
   ImageRequireSource,
   ImageURISource,
 } from 'react-native';
-import {useAnimation} from 'Helpers/Hooks';
+import {useAnimation} from '../../Helpers/Hooks';
 
 type ImageCustomPropsBase = ImagePropsBase & {
   imageStyle?: StyleProp<ImageStyle>;

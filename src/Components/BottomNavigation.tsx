@@ -1,12 +1,11 @@
 import React, {Fragment, useState, useEffect, useRef, Ref} from 'react';
 import {Animated, UIManager, Easing, StyleSheet, View} from 'react-native';
 import Icon from './Core/Icon';
-import * as Palette from './../Helpers/palette';
 import Ripple from './Core/Ripple';
 import Text from './Core/Typography';
 import {Transitioning, Transition} from 'react-native-reanimated';
 import SafeAreaView from 'react-native-safe-area-view';
-import {useTheme, ThemeTypes} from 'Theming';
+import {useTheme, ThemeTypes} from '../Theming';
 import Color from 'color';
 interface BottomNavigationProps {
   config?: {

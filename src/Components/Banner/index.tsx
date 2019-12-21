@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {View, Animated, StyleSheet, Easing} from 'react-native';
-import {useAnimation, useLayout} from 'Helpers/Hooks';
+import {useAnimation, useLayout} from '../../Helpers/Hooks';
 import Text, {TextProps} from './../Core/Typography';
-import Button, {ButtonProps} from 'Components/Buttons/Button';
-import {elevationShadowStyle} from 'Helpers/styleGenerator';
+import Button, {ButtonProps} from '../Buttons/Button';
+import {elevationShadowStyle} from '../../Helpers/styleGenerator';
 
 type actionsProps = ButtonProps & {
   label: string;

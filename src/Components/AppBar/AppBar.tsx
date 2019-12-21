@@ -3,10 +3,10 @@ import {View, StyleSheet, ViewProps, Animated} from 'react-native';
 import Action from './Action';
 import Content, {AppBarContentProps} from './Content';
 import Color from 'color';
-import {elevationShadowStyle} from 'Helpers/styleGenerator';
-import {IconButtonProps} from 'Components/Buttons/IconButton';
+import {elevationShadowStyle} from '../../Helpers/styleGenerator';
+import {IconButtonProps} from '../Buttons/IconButton';
 import SafeAreaView from 'react-native-safe-area-view';
-import {ThemeTypes, useTheme} from 'Theming';
+import {ThemeTypes, useTheme} from '../../Theming';
 const AnimatedSafeAreaView = Animated.createAnimatedComponent(SafeAreaView);
 interface AppBarProps extends ViewProps {
   varint?: 'top' | 'bottom';

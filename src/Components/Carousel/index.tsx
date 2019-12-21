@@ -1,11 +1,10 @@
 import React, {useState, useRef, Ref} from 'react';
 import {Animated, Dimensions, StyleSheet, View} from 'react-native';
-import PropTypes from 'prop-types';
 import ScaledImage from './ScaledImage';
 import PaginationItem from './PaginationItem';
-import {blue500} from 'Helpers/palette';
-import Ripple from 'Components/Core/Ripple';
-import {useDimensions} from 'Helpers/Hooks';
+import {blue500} from '../../Helpers/palette';
+import Ripple from '../Core/Ripple';
+import {useDimensions} from '../../Helpers/Hooks';
 const Carousel = ({imgData}: {imgData?: any}) => {
   const {width} = useDimensions().window;
   const [active, setState] = useState(0);

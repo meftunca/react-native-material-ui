@@ -4,8 +4,8 @@ import Surface, {SurfaceProps} from '../Core/Surface';
 import {ViewStyle, StyleProp, View} from 'react-native';
 import Icon, {IconFontFamily} from '../Core/Icon';
 import Color from 'color';
-import {useTheme} from 'Theming';
-import Text, {TextProps} from 'Components/Core/Typography';
+import {useTheme} from '../../Theming';
+import Text, {TextProps} from '../Core/Typography';
 
 export interface FABProps extends RippleProps {
   iconFontFamily?: IconFontFamily;

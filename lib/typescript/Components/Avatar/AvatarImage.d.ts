@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImageProps, StyleProp, ViewStyle } from 'react-native';
-import { ThemeTypes } from 'Theming';
+import { ThemeTypes } from '../../Theming';
 export interface AvatarImageProps extends ImageProps {
     elevation?: number;
     size?: number;

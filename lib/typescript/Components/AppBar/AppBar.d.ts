@@ -1,8 +1,8 @@
 import React from 'react';
 import { ViewProps } from 'react-native';
 import { AppBarContentProps } from './Content';
-import { IconButtonProps } from 'Components/Buttons/IconButton';
-import { ThemeTypes } from 'Theming';
+import { IconButtonProps } from '../Buttons/IconButton';
+import { ThemeTypes } from '../../Theming';
 interface AppBarProps extends ViewProps {
     varint?: 'top' | 'bottom';
     subChildren?: any | React.ReactNode;

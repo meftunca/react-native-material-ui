@@ -1,14 +1,7 @@
 import React from 'react';
-import {
-  Image,
-  Animated,
-  ImageProps,
-  StyleProp,
-  ViewStyle,
-  ImageStyle,
-} from 'react-native';
-import {elevationShadowStyle} from 'Helpers/styleGenerator';
-import {ThemeTypes, useTheme} from 'Theming';
+import {Image, Animated, ImageProps, StyleProp, ViewStyle} from 'react-native';
+import {elevationShadowStyle} from '../../Helpers/styleGenerator';
+import {ThemeTypes, useTheme} from '../../Theming';
 
 export interface AvatarImageProps extends ImageProps {
   elevation?: number;

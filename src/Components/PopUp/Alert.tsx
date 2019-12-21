@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
-import Dialog from 'Components/Dialog';
-import {red500, blue500, grey700} from '../../Helpers/palette';
-import Button from 'Components/Buttons/Button';
-import Text, {TextProps} from 'Components/Core/Typography';
+import React from 'react';
+import Dialog from '../Dialog';
+import Button from '../Buttons/Button';
+import Text, {TextProps} from '../Core/Typography';
 
 type ActionType = {
   color?: string;

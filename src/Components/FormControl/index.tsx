@@ -3,7 +3,7 @@ import {View, Animated, Easing} from 'react-native';
 import * as Palette from './../../Helpers/palette';
 import Icon from '../Core/Icon';
 import Color from 'color';
-import Ripple from 'Components/Core/Ripple';
+import Ripple from '../Core/Ripple';
 const FormControl = ({
   type = 'checkbox',
   color = Palette.blue500,

@@ -1,7 +1,7 @@
 import React from 'react';
-import {TextProps} from 'Components/Core/Typography';
-import Alert from 'Components/PopUp/Alert';
-import Snackbar from 'Components/PopUp/Snackbar';
+import {TextProps} from '../Components/Core/Typography';
+import Alert from '../Components/PopUp/Alert';
+import Snackbar from '../Components/PopUp/Snackbar';
 
 type ActionType = {
   color?: string;

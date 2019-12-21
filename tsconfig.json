@@ -7,6 +7,8 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["esnext", "dom"],
+    "inlineSourceMap": false,
+    "inlineSources": false,
     "module": "esnext",
     "sourceMap": false,
     "moduleResolution": "node",
@@ -23,9 +25,7 @@
     "baseUrl": "./src",
     "rootDirs": ["src", "stories"],
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": false,
-    "noEmit": false
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "exclude": [

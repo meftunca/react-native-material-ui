@@ -11,10 +11,9 @@ import {
 import Color from 'color';
 import {IconButtonProps} from './Buttons/IconButton';
 import Ripple, {RippleProps} from './Core/Ripple';
-import {blue500} from 'Helpers/palette';
 import Icon from './Core/Icon';
-import {useAnimation} from 'Helpers/Hooks';
-import {ThemeTypes, useTheme} from 'Theming';
+import {useAnimation} from '../Helpers/Hooks';
+import {ThemeTypes, useTheme} from '../Theming';
 const AnimatedBaseIcon = Animated.createAnimatedComponent(Icon);
 interface ChipProps extends RippleProps {
   avatarSource?: ImageSourcePropType;

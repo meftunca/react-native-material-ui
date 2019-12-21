@@ -3,7 +3,7 @@ import { RippleProps } from '../Core/Ripple';
 import { SurfaceProps } from '../Core/Surface';
 import { ViewStyle, StyleProp } from 'react-native';
 import { IconFontFamily } from '../Core/Icon';
-import { TextProps } from 'Components/Core/Typography';
+import { TextProps } from '../Core/Typography';
 export interface FABProps extends RippleProps {
     iconFontFamily?: IconFontFamily;
     role?: 'fab' | 'icon' | 'button';

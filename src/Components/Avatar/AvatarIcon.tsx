@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Animated, StyleProp, ViewStyle, ImageStyle} from 'react-native';
-import Icon from 'Components/Core/Icon';
-import {elevationShadowStyle} from 'Helpers/styleGenerator';
+import Icon from '../Core/Icon';
+import {elevationShadowStyle} from '../../Helpers/styleGenerator';
 import Color from 'color';
-import {ThemeTypes, useTheme} from 'Theming';
+import {ThemeTypes, useTheme} from '../../Theming';
 export interface AvatarIconProps {
   elevation?: number;
   size?: number;

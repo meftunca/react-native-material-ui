@@ -4,7 +4,7 @@ import {
   directionRepeat,
   elevationShadowStyle,
 } from './../../Helpers/styleGenerator';
-import {ThemeTypes, useTheme} from 'Theming';
+import {ThemeTypes, useTheme} from '../../Theming';
 
 type flexType =
   | 'center'

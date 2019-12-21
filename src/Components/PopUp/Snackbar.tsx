@@ -1,12 +1,12 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {StyleSheet, StyleProp, ViewStyle} from 'react-native';
-import Surface from 'Components/Core/Surface';
-import Text from 'Components/Core/Typography';
-import {useTheme} from 'Theming';
-import Button from 'Components/Buttons/Button';
+import Surface from '../Core/Surface';
+import Text from '../Core/Typography';
+import {useTheme} from '../../Theming';
+import Button from '../Buttons/Button';
 import Color from 'color';
-import {useAnimation} from 'Helpers/Hooks';
+import {useAnimation} from '../../Helpers/Hooks';
 type ActionType = {
   color?: string;
   label?: string;

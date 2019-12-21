@@ -6,8 +6,8 @@ import Surface, {SurfaceProps} from './../Core/Surface';
 import {ViewStyle, StyleProp, PixelRatio, View, ViewProps} from 'react-native';
 import Icon, {IconFontFamily} from '../Core/Icon';
 import Color from 'color';
-import {useTheme} from 'Theming';
-import {elevationShadowStyle} from 'Helpers/styleGenerator';
+import {useTheme} from '../../Theming';
+import {elevationShadowStyle} from '../../Helpers/styleGenerator';
 
 export interface ButtonProps extends RippleProps {
   iconFontFamily?: IconFontFamily;

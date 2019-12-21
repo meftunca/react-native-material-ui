@@ -9,7 +9,7 @@ import {
   TextStyle,
 } from 'react-native';
 import Color from 'color';
-import {ThemeTypes, useTheme} from 'Theming';
+import {useTheme} from '../../Theming';
 const AnimatedText = Animated.createAnimatedComponent(TextBase);
 export type TextProps = TextBaseProps & {
   weight?:

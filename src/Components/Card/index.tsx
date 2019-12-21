@@ -1,15 +1,8 @@
 import React from 'react';
-import {
-  View,
-  PixelRatio,
-  ViewProps,
-  StyleProp,
-  ViewStyle,
-  ImageStyle,
-} from 'react-native';
+import {View, PixelRatio, ViewProps, StyleProp, ImageStyle} from 'react-native';
 import Surface, {SurfaceProps} from './../Core/Surface';
 import Text, {TextProps} from './../Core/Typography';
-import {ThemeTypes} from 'Theming';
+import {ThemeTypes} from '../../Theming';
 const roundPixel: number = PixelRatio.roundToNearestPixel(1);
 const DefaultSurface: SurfaceProps = {
   direction: 'column',

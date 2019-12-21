@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Animated, StyleProp, ViewStyle, ImageStyle} from 'react-native';
-import {elevationShadowStyle} from 'Helpers/styleGenerator';
-import Text, {TextProps} from 'Components/Core/Typography';
+import {elevationShadowStyle} from '../../Helpers/styleGenerator';
+import Text, {TextProps} from '../Core/Typography';
 import Color from 'color';
-import {ThemeTypes, useTheme} from 'Theming';
+import {ThemeTypes, useTheme} from '../../Theming';
 
 export interface AvatarTextProps {
   elevation?: number;

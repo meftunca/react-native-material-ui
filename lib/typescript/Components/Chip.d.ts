@@ -2,7 +2,7 @@ import React from 'react';
 import { ImageSourcePropType } from 'react-native';
 import { IconButtonProps } from './Buttons/IconButton';
 import { RippleProps } from './Core/Ripple';
-import { ThemeTypes } from 'Theming';
+import { ThemeTypes } from '../Theming';
 interface ChipProps extends RippleProps {
     avatarSource?: ImageSourcePropType;
     icon?: string;

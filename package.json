@@ -1,10 +1,11 @@
 {
   "name": "@devloops/react-native-variant",
-  "version": "0.0.4",
+  "version": "0.0.8",
   "private": false,
   "displayName": "react-native-variant",
   "description": "react-native material ui library",
   "license": "MIT",
+  "homepage": "https://github.com/meftunca/react-native-variant",
   "author": {
     "email": "buraksenturk25@gmail.com",
     "name": "Muhammed Burak Şentürk",
@@ -40,7 +41,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "lib/",
     "src/"
   ],
   "rnpm": {
@@ -53,6 +53,11 @@
     "color": "^3.1.2"
   },
   "peerDependencies": {
+    "react-native-gesture-handler": "^1.5.2",
+    "react-native-reanimated": "^1.4.0",
+    "react-native-safe-area-context": "^0.6.1",
+    "react-native-safe-area-view": "^1.0.0",
+    "react-native-vector-icons": "^6.6.0",
     "react": "*",
     "react-native": "*"
   },
@@ -67,7 +72,6 @@
     "@babel/runtime": "^7.7.7",
     "@react-native-community/bob": "^0.7.0",
     "@react-native-community/eslint-config": "^0.0.5",
-    "@react-native-community/masked-view": "^0.1.5",
     "@react-navigation/bottom-tabs": "^5.0.0-alpha.27",
     "@react-navigation/core": "^5.0.0-alpha.29",
     "@react-navigation/drawer": "^5.0.0-alpha.30",
@@ -89,13 +93,10 @@
     "react-native-reanimated": "^1.4.0",
     "react-native-safe-area-context": "^0.6.1",
     "react-native-safe-area-view": "^1.0.0",
-    "react-native-screens": "^2.0.0-alpha.22",
     "react-native-vector-icons": "^6.6.0",
+    "react-native-screens": "^2.0.0-alpha.22",
     "react-test-renderer": "16.12.0",
     "typescript": "^3.7.4"
-  },
-  "_moduleAliases": {
-    "@devloops/rn-mui": "./src"
   },
   "jest": {
     "preset": "react-native",

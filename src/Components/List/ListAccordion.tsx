@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {View, Animated} from 'react-native';
 import ListItem, {ListItemProps} from './ListItem';
-import Collapse from 'Components/Core/Collapse';
-import {useAnimation} from 'Helpers/Hooks';
-import Ripple from 'Components/Core/Ripple';
-import IconBase from 'Components/Core/Icon';
+import Collapse from '../Core/Collapse';
+import {useAnimation} from '../../Helpers/Hooks';
+import Ripple from '../Core/Ripple';
+import IconBase from '../Core/Icon';
 const Icon = Animated.createAnimatedComponent(IconBase);
 const ListAccordion: React.FC<ListItemProps & {
   expanded?: boolean;

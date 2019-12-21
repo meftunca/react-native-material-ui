@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import {Animated, Easing, StyleSheet} from 'react-native';
-import {blue200} from 'Helpers/palette';
+import {blue200} from '../../Helpers/palette';
 
 const PaginationItem = ({active}: {active?: boolean; color?: string}) => {
   const animate = useRef(new Animated.Value(active ? 6 : 0)).current;

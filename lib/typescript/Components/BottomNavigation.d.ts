@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeTypes } from 'Theming';
+import { ThemeTypes } from '../Theming';
 interface BottomNavigationProps {
     config?: {
         initialScene?: string;

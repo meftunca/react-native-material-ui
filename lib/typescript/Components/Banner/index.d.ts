@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextProps } from './../Core/Typography';
-import { ButtonProps } from 'Components/Buttons/Button';
+import { ButtonProps } from '../Buttons/Button';
 declare type actionsProps = ButtonProps & {
     label: string;
 };

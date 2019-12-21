@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
 import {Animated, Easing, View} from 'react-native';
-import {useLayout} from 'Helpers/Hooks';
+import {useLayout} from '../../Helpers/Hooks';
 
 interface CollapseProps {
   expanded?: boolean;

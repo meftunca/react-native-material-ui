@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, StyleSheet, StyleProp, ViewStyle, ImageStyle} from 'react-native';
-import Surface from 'Components/Core/Surface';
-import Text, {TextProps} from 'Components/Core/Typography';
-import Ripple, {RippleProps} from 'Components/Core/Ripple';
-import {ThemeTypes, useTheme} from 'Theming';
+import {View, StyleSheet, StyleProp, ViewStyle} from 'react-native';
+import Surface from '../Core/Surface';
+import Text, {TextProps} from '../Core/Typography';
+import Ripple, {RippleProps} from '../Core/Ripple';
+import {ThemeTypes, useTheme} from '../../Theming';
 
 type listHorizontalItemType = (props: {
   color?: string;

@@ -9,8 +9,8 @@ import {
   UIManager,
 } from 'react-native';
 import {useDimensions, useLayout, useAnimation} from './../../Helpers/Hooks';
-import {elevationShadowStyle} from 'Helpers/styleGenerator';
-import Ripple from 'Components/Core/Ripple';
+import {elevationShadowStyle} from '../../Helpers/styleGenerator';
+import Ripple from '../Core/Ripple';
 UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);
 

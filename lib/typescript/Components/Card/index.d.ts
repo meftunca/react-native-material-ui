@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleProp, ImageStyle } from 'react-native';
 import { SurfaceProps } from './../Core/Surface';
 import { TextProps } from './../Core/Typography';
-import { ThemeTypes } from 'Theming';
+import { ThemeTypes } from '../../Theming';
 interface HeaderProps extends SurfaceProps {
     left?: React.FC<{
         size?: number;

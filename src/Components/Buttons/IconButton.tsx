@@ -1,10 +1,9 @@
 import React from 'react';
 import Ripple, {RippleProps} from './../Core/Ripple';
-import Surface, {SurfaceProps} from './../Core/Surface';
+import {SurfaceProps} from './../Core/Surface';
 import {ViewStyle, StyleProp, View} from 'react-native';
 import Icon, {IconFontFamily} from '../Core/Icon';
-import Color from 'color';
-import {useTheme} from 'Theming';
+import {useTheme} from '../../Theming';
 
 export interface IconButtonProps extends RippleProps {
   iconFontFamily?: IconFontFamily;

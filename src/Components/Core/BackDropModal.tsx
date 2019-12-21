@@ -9,7 +9,7 @@ import {
   Easing,
 } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
-import {useAnimation, useDimensions} from 'Helpers/Hooks';
+import {useAnimation, useDimensions} from '../../Helpers/Hooks';
 const SafeAreaViewAnimated = Animated.createAnimatedComponent(SafeAreaView);
 interface BackDropModalProps {
   visible?: boolean;
