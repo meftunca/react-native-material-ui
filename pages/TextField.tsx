@@ -5,118 +5,82 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const TextFieldPage = () => {
   return (
-    <KeyboardAvoidingView behavior="height">
+    <KeyboardAvoidingView enabled behavior="position">
       <ScrollView>
         <View style={{marginTop: 20, marginBottom: 5, paddingHorizontal: 12}}>
           <Text>Outline TextField</Text>
         </View>
-        <TextField
+        <TextField.Outlined
           label="Outline Input with icon"
-          variant="outlined"
           Left={(props: any) => <Icon name="comment" {...props} />}
           Right={(props: any) => (
             <IconButton {...props} role="icon" icon="send" />
           )}
         />
-        <TextField
+        <TextField.Outlined
           label="Outline Input"
-          variant="outlined"
           helperText="Counter!"
           count={true}
           min={3}
           max={10}
         />
-        <TextField
+        <TextField.Outlined label="Outline Input" helperText="Help me !" />
+        <TextField.Outlined
           label="Outline Input"
-          variant="outlined"
-          helperText="Help me !"
-        />
-        <TextField
-          label="Outline Input"
-          variant="outlined"
           error
           helperText="Help me !"
         />
-        <TextField
-          label="Outline Input"
-          variant="outlined"
-          success
-          helperText="Good"
-        />
-        <TextField
-          label="Outline Input"
-          variant="outlined"
-          warning
-          helperText="Bad"
-        />
-        <TextField
+        <TextField.Outlined label="Outline Input" success helperText="Good" />
+        <TextField.Outlined label="Outline Input" warning helperText="Bad" />
+        <TextField.Outlined
           label="Outline multiLine Input"
-          variant="outlined"
           multiLine={true}
           numberOfLines={3}
         />
         <View style={{marginTop: 20, marginBottom: 5, paddingHorizontal: 12}}>
           <Text>FlatBox TextField</Text>
         </View>
-        <TextField
+        <TextField.Contained
           label="Outline Input with icon"
-          variant="contained"
           Left={(props: any) => <Icon name="comment" {...props} />}
           Right={(props: any) => <Icon name="send" {...props} />}
         />
-        <TextField label="FlatBox Input" variant="contained" />
-        <TextField
+        <TextField.Contained label="FlatBox Input" />
+        <TextField.Contained
           label="FlatBox Input"
-          variant="contained"
           helperText="Counter!"
           count={true}
           min={3}
           max={10}
         />
-        <TextField
+        <TextField.Contained label="FlatBox Input" helperText="Help me !" />
+        <TextField.Contained
           label="FlatBox Input"
-          variant="contained"
-          helperText="Help me !"
-        />
-        <TextField
-          label="FlatBox Input"
-          variant="contained"
           error
           helperText="Help me !"
         />
-        <TextField
-          label="FlatBox Input"
-          variant="contained"
-          success
-          helperText="Good"
-        />
-        <TextField
-          label="FlatBox Input"
-          variant="contained"
-          warning
-          helperText="Bad"
-        />
-        <TextField
+        <TextField.Contained label="FlatBox Input" success helperText="Good" />
+        <TextField.Contained label="FlatBox Input" warning helperText="Bad" />
+        <TextField.Contained
           label="FlatBox multiLine Input"
-          variant="contained"
           multiLine={true}
           numberOfLines={3}
         />
         <View style={{marginTop: 20, marginBottom: 5, paddingHorizontal: 12}}>
           <Text>Default Flat TextField</Text>
         </View>
-        <TextField
+        <TextField.Flat
           label="Flat Input with icon"
           Left={(props: any) => <Icon name="comment" {...props} />}
           Right={(props: any) => <Icon name="send" {...props} />}
         />
-        <TextField label="Default Flat Input" />
-        <TextField label="Count Input" count={true} min={3} max={10} />
-        <TextField label="Helper Flat Input" helperText="Help me !" />
-        <TextField label="Error Action" error helperText="Help me !" />
-        <TextField label="Success Action" success helperText="Good" />
-        <TextField label="Warning Action" warning helperText="Bad" />
-        <TextField
+        <TextField.Flat label="Default Flat Input" />
+        <TextField.Flat label="Count Input" count={true} min={3} max={10} />
+        <TextField.Flat label="Helper Flat Input" helperText="Help me !" />
+        <TextField.Flat label="Error Action" error helperText="Help me !" />
+        <TextField.Flat label="Success Action" success helperText="Good" />
+        <TextField.Flat label="Warning Action" warning helperText="Bad" />
+        <TextField.Flat
           label="Default Flat  multiLine Action"
           multiLine={true}
           numberOfLines={3}

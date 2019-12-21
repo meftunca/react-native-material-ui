@@ -14,10 +14,9 @@ const MenuPage = ({}) => {
       <MenuBasic
         trigger={
           <View style={{minHeight: 50}}>
-            <TextField
+            <TextField.Contained
               label="Outline Input"
               helperText="Counter!"
-              variant="contained"
               count={true}
               min={3}
               max={10}

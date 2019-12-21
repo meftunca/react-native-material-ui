@@ -1,7 +1,27 @@
 {
-  "name": "reactNativeMUI",
+  "name": "react-native-variant",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "displayName": "react-native-variant",
+  "description": "react-native material ui library",
+  "author": {
+    "email": "buraksenturk25@gmail.com",
+    "name": "Muhammed Burak Şentürk",
+    "url": "https://meftunca.github.io/react-native-variant"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "ui",
+    "material",
+    "material-theme",
+    "menu",
+    "appbar",
+    "bottom navigation",
+    "input",
+    "textfield",
+    "surface"
+  ],
   "scripts": {
     "compile": "bob build",
     "android": "react-native run-android",
@@ -10,12 +30,16 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "login-push": "npm login --registry=https://npm.pkg.github.com/;npm publish --access public"
   },
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
   "react-native": "./lib/commonjs/index.js",
   "types": "./lib/typescript/src/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "files": [
     "lib/",
     "src/"
@@ -45,19 +69,18 @@
     "@react-native-community/bob": "^0.7.0",
     "@react-native-community/eslint-config": "^0.0.5",
     "@react-native-community/masked-view": "^0.1.5",
-    "@react-navigation/bottom-tabs": "^5.0.0-alpha.24",
-    "@react-navigation/core": "^5.0.0-alpha.27",
-    "@react-navigation/drawer": "^5.0.0-alpha.26",
-    "@react-navigation/native": "^5.0.0-alpha.17",
-    "@react-navigation/stack": "^5.0.0-alpha.42",
+    "@react-navigation/bottom-tabs": "^5.0.0-alpha.27",
+    "@react-navigation/core": "^5.0.0-alpha.29",
+    "@react-navigation/drawer": "^5.0.0-alpha.30",
+    "@react-navigation/native": "^5.0.0-alpha.21",
+    "@react-navigation/stack": "^5.0.0-alpha.46",
     "@types/jest": "^24.0.24",
-    "@types/react": "^16.9.16",
+    "@types/react": "^16.9.17",
     "@types/react-native": "^0.60.25",
-    "@types/react-native-vector-icons": "^6.4.4",
+    "@types/react-native-vector-icons": "^6.4.5",
     "@types/react-test-renderer": "16.9.1",
     "babel-jest": "^24.9.0",
     "babel-plugin-module-resolver": "^4.0.0",
-    "babel-plugin-react-native-web": "^0.11.7",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.57.0",
     "module-alias": "^2.2.2",
@@ -67,10 +90,10 @@
     "react-native-reanimated": "^1.4.0",
     "react-native-safe-area-context": "^0.6.1",
     "react-native-safe-area-view": "^1.0.0",
-    "react-native-screens": "^2.0.0-alpha.20",
+    "react-native-screens": "^2.0.0-alpha.22",
     "react-native-vector-icons": "^6.6.0",
     "react-test-renderer": "16.12.0",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.4"
   },
   "_moduleAliases": {
     "@devloops/rn-mui": "./src"

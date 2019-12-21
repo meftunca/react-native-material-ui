@@ -6,14 +6,23 @@ import {
   red500,
   grey900,
   teal500,
-} from './../Helpers/palette';
+} from '../Helpers/palette';
+import ThemeTypes from './ThemeTypes';
 
-const defaultTheme = {
+const LightTheme: ThemeTypes = {
+  dark: false,
+  roundness: 4,
+  durations: {
+    small: 200,
+    medium: 500,
+    long: 1000,
+  },
   gutter: 4,
   spacing: function(multiplier = 1) {
     return this.gutter * multiplier;
   },
   color: {
+    surface: 'white',
     primary: blue500,
     secondary: teal500,
     accent: purple500,
@@ -32,7 +41,7 @@ const defaultTheme = {
         borderRadius: 2, // sayı
         margin: 0, // 0-sonsuz | [number,number,...[number,number]]
         padding: 0, // 0-sonsuz | [number,number,...[number,number]]
-        overflow: 'hidden', //visible or scroll
+        overflow: 'visible', //hidden or scroll
       },
       props: {
         justify: 'flex-start',
@@ -50,4 +59,4 @@ const defaultTheme = {
   },
 };
 
-export default defaultTheme;
+export default LightTheme;

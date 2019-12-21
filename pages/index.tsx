@@ -7,7 +7,7 @@ import ButtonPage from './Button';
 import SurfacePage from './Surface';
 import TextField from './TextField';
 import {useSafeArea} from 'react-native-safe-area-context';
-import {Button, Palette, ThemeProvider, Carousel} from './../src';
+import {Button, Palette, ThemeProvider, Provider, IconButton} from './../src';
 import Typography from './Typography';
 import List from './List';
 import MenuPage from './Menu';
@@ -19,6 +19,7 @@ import CollapsePage from './Collapse';
 import BottomNavigationPage from './BottomNavigation';
 import CarouselPage from './Carousel';
 import BannerPage from './Banner';
+import CardPage from './Card';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 const Drawer = createDrawerNavigator();
@@ -26,7 +27,7 @@ const Stack = createStackNavigator();
 const Router = () => {
   return (
     <SafeAreaProvider>
-      <ThemeProvider>
+      <Provider>
         <NavigationNativeContainer>
           <Drawer.Navigator
             drawerType="front"
@@ -36,13 +37,15 @@ const Router = () => {
               name="home"
               component={({navigation}) => (
                 <Stack.Navigator
-                  initialRouteName="SurfacePage"
+                  initialRouteName="BannerPage"
                   headerMode="screen"
                   screenOptions={{
                     headerLeft: () => (
-                      <Button
+                      <IconButton
                         icon="menu"
-                        onPress={() => navigation.openDrawer()}></Button>
+                        color="black"
+                        onPress={() => navigation.openDrawer()}
+                      />
                     ),
                   }}>
                   <Stack.Screen name="AppBarPage" component={AppBarPage} />
@@ -53,6 +56,7 @@ const Router = () => {
                   <Stack.Screen name="BannerPage" component={BannerPage} />
                   <Stack.Screen name="ButtonPage" component={ButtonPage} />
                   <Stack.Screen name="Carousel" component={CarouselPage} />
+                  <Stack.Screen name="CardPage" component={CardPage} />
                   <Stack.Screen name="SurfacePage" component={SurfacePage} />
                   <Stack.Screen name="Typography" component={Typography} />
                   <Stack.Screen name="Lists" component={List} />
@@ -70,7 +74,7 @@ const Router = () => {
             />
           </Drawer.Navigator>
         </NavigationNativeContainer>
-      </ThemeProvider>
+      </Provider>
     </SafeAreaProvider>
   );
 };
@@ -118,6 +122,12 @@ const CustomDrawerContent: any = ({
         color="black"
         onPress={() => navigation.navigate('ButtonPage')}>
         Buttons Page
+      </Button>
+      <Button
+        type="drawer"
+        color="black"
+        onPress={() => navigation.navigate('CardPage')}>
+        Card Page
       </Button>
       <Button
         type="drawer"

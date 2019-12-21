@@ -14,42 +14,42 @@ const ButtonPage = () => {
   return (
     <SafeAreaView>
       <View style={{flexDirection: 'row', margin: 8}}>
-        <Button variant="contained" icon="plus">
+        <Button variant="contained" icon="plus" onPress={() => {}}>
           contained
         </Button>
-        <Button variant="contained" radius={30}>
+        <Button variant="contained" onPress={() => {}}>
           contained Round
         </Button>
       </View>
       <View style={{flexDirection: 'row', margin: 8}}>
-        <Button variant="text" icon="plus">
+        <Button variant="text" icon="plus" onPress={() => {}}>
           contained
         </Button>
-        <Button variant="text" radius={30}>
+        <Button variant="text" cornerRadius={30} onPress={() => {}}>
           contained Round
         </Button>
       </View>
       <View style={{flexDirection: 'row', margin: 8}}>
-        <Button variant="outlined" icon="plus">
+        <Button variant="outlined" icon="plus" onPress={() => {}}>
           contained
         </Button>
-        <Button variant="outlined" radius={30}>
+        <Button variant="outlined" cornerRadius={30} onPress={() => {}}>
           contained Round
         </Button>
       </View>
       <View style={{flexDirection: 'row', margin: 8}}>
-        <IconButton icon="cards" color="warning" />
-        <IconButton icon="cards" color="green" />
+        <IconButton icon="cards" color="warning" onPress={() => {}} />
+        <IconButton icon="cards" color="green" onPress={() => {}} />
       </View>
       <View style={{flexDirection: 'row', margin: 8}}>
-        <FAB icon="cards" color="warning" label="warning" />
-        <FAB icon="cards" color="green" label="green" />
+        <FAB icon="cards" color="warning" label="warning" onPress={() => {}} />
+        <FAB icon="cards" color="green" label="green" onPress={() => {}} />
       </View>
-      <Button variant="outlined" radius={30}>
+      <Button variant="outlined" cornerRadius={30} onPress={() => {}}>
         Outlined Round
       </Button>
 
-      <Button variant="text" type="drawer">
+      <Button variant="text" type="drawer" onPress={() => {}}>
         Drawer Item
       </Button>
     </SafeAreaView>

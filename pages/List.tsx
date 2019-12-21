@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,ScrollView} from 'react-native';
+import {View, ScrollView} from 'react-native';
 import {
   Ripple,
   Collapse,
@@ -14,26 +14,24 @@ export default () => {
   return (
     <ScrollView>
       <List.Accordion title="List Accordion" startDeg="90deg" expanded={false}>
-        {Array(3)
-          .fill('')
-          .map((i, k) => (
-            <List.Item
-              key={k}
-              type="avatar"
-              left={({...props}) => <IconButton icon="account" {...props} />}
-              right={({...props}) => (
-                <IconButton
-                  // {...props}
-                  icon="chevron-right"
-                  onPress={e => {
-                    console.log('e', e);
-                  }}
-                />
-              )}
-              title={'item ' + (k + 4)}
-              subtitle={'Subtitle ' + (k + 4)}
-            />
-          ))}
+        <View style={{margin: 8}}>
+          {Array(3)
+            .fill('')
+            .map((i, k) => (
+              <List.Item
+                key={k}
+                type="avatar"
+                left={({...props}) => (
+                  <IconButton {...props} icon="account" size={24} />
+                )}
+                right={({...props}) => (
+                  <IconButton {...props} icon="chevron-right" />
+                )}
+                title={'item ' + (k + 4)}
+                subtitle={'Subtitle ' + (k + 4)}
+              />
+            ))}
+        </View>
       </List.Accordion>
       {Array(3)
         .fill('')

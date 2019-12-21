@@ -38,24 +38,6 @@ const AppBarPage = ({}) => {
           color={Palette.amber600}
           onPress={() => console.log('Pressed mail')}
         />
-        <View
-          style={{
-            position: 'absolute',
-            alignSelf: 'center',
-            backgroundColor: '#f8f4f4',
-            width: 70,
-            height: 70,
-            borderRadius: 35,
-            bottom: 25,
-            zIndex: 10,
-          }}>
-          <Icon
-            name="plus"
-            color="#f00"
-            style={{alignSelf: 'center'}}
-            size={28}
-          />
-        </View>
         <AppBar.Action
           icon="label"
           color={Palette.red500}

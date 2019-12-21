@@ -18,13 +18,13 @@ const CollapsePage = () => {
       <Collapse delay={50} duration={500} expanded={expanded}>
         <Surface direction="column">
           <Button variant="contained">contained</Button>
-          <Button variant="contained" radius={30}>
+          <Button variant="contained" cornerRadius={30}>
             contained Round
           </Button>
           <Button variant="outlined" icon="cards">
             Outlined
           </Button>
-          <Button variant="outlined" radius={30}>
+          <Button variant="outlined" cornerRadius={30}>
             Outlined Round
           </Button>
         </Surface>

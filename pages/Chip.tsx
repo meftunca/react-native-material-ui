@@ -1,13 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View} from 'react-native';
 import {Chip, Button, IconButton} from './../src';
 
 const ChipPage = ({}) => {
+  const [state, setState] = useState(null);
   return (
     <>
       <View style={{flexDirection: 'row', padding: 16}}>
-        <Chip label="Deneme" isSelected={true} />
-        <Chip variant="flat" label="Deneme" isSelected={true} />
+        <Chip
+          label="Deneme"
+          isSelected={state === 0}
+          selectedIcon="check"
+          onSelect={() => setState(state === 0 ? null : 0)}
+        />
+        <Chip
+          variant="flat"
+          label="Deneme"
+          isSelected={state === 1}
+          selectedIcon="check"
+          onSelect={() => setState(state === 1 ? null : 1)}
+        />
       </View>
       <View style={{flexDirection: 'row', padding: 16}}>
         <Chip icon="check" label="Deneme" />
