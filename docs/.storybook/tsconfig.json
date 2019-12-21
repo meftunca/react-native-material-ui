@@ -19,7 +19,7 @@
     "noUnusedLocals": false,
     "strict": false,
     "target": "esnext",
-    "baseUrl": "./src",
+    "baseUrl": "./stories",
     "rootDirs": ["stories"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,

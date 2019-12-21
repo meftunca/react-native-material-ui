@@ -19,6 +19,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
   },
   "dependencies": {
+    "@devloops/react-native-variant": "^0.0.7",
     "@react-native-community/masked-view": "^0.1.5",
     "@react-navigation/bottom-tabs": "^5.0.0-alpha.24",
     "@react-navigation/core": "^5.0.0-alpha.27",
