@@ -13,7 +13,7 @@ import {
 import * as Palette from './../../Helpers/palette';
 import BottomBar from './BottomHelper';
 
-interface TextFieldContainedProps extends TextInputProps {
+export interface TextFieldContainedProps extends TextInputProps {
   defaultValue?: string;
   value?: string;
   label?: string;

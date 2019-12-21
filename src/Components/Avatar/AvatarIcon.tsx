@@ -4,7 +4,7 @@ import Icon from 'Components/Core/Icon';
 import {elevationShadowStyle} from 'Helpers/styleGenerator';
 import Color from 'color';
 import {ThemeTypes, useTheme} from 'Theming';
-interface AvatarIconProps {
+export interface AvatarIconProps {
   elevation?: number;
   size?: number;
   style?: StyleProp<ImageStyle>;

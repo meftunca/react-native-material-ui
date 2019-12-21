@@ -2,7 +2,6 @@ import React from 'react';
 import { ViewStyle, TouchableWithoutFeedbackProps, StyleProp } from 'react-native';
 export interface RippleProps extends TouchableWithoutFeedbackProps {
     disabled?: boolean;
-    children?: string | JSX.Element | JSX.Element[];
     style?: StyleProp<ViewStyle>;
     rippleColor?: string;
     rippleOpacity?: number;

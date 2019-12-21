@@ -15,6 +15,7 @@ interface HeaderProps extends SurfaceProps {
     subtitle?: JSX.Element | string;
     titleProps?: TextProps;
     subtitleProps?: TextProps;
+    fullScreen?: boolean;
 }
 interface WrapProps {
     Header: React.FC<HeaderProps>;
@@ -27,6 +28,8 @@ interface DialogProps extends SurfaceProps {
     onClose?: () => void | undefined;
     fullScreen?: boolean;
     animationType?: 'fade' | 'slide' | 'none';
+    duration?: number;
+    delay?: number;
 }
 declare const Dialog: React.FC<DialogProps> & WrapProps;
 export default Dialog;

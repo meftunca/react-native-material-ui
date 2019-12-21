@@ -8,6 +8,7 @@
     "jsx": "react",
     "lib": ["esnext", "dom"],
     "module": "esnext",
+    "sourceMap": false,
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -23,8 +24,8 @@
     "rootDirs": ["src", "stories"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "isolatedModules": false,
+    "noEmit": false
   },
   "include": ["src"],
   "exclude": [

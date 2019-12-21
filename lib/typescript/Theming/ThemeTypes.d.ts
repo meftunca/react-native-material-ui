@@ -1,4 +1,5 @@
-export declare type Color = {
+declare type Color = {
+    surface: string;
     primary: string;
     secondary: string;
     accent: string;
@@ -10,7 +11,7 @@ export declare type Color = {
     defaultContrastValue: number;
 };
 declare type flexType = 'center' | 'space-between' | 'space-around' | 'space-evenly' | 'flex-end' | 'flex-start' | 'stretch';
-export declare type Root = {
+declare type Root = {
     backgroundColor: string;
     elevation: number;
     borderRadius: number;
@@ -18,20 +19,20 @@ export declare type Root = {
     padding: number;
     overflow: string;
 };
-export declare type Props = {
+declare type Props = {
     justify: flexType;
     alignItems: flexType;
     alignContent: string;
     direction: string;
 };
-export declare type Surface = {
+declare type Surface = {
     root: Root;
     props: Props;
 };
-export declare type Components = {
+declare type Components = {
     surface: Surface;
 };
-export declare type FontSizes = {
+declare type FontSizes = {
     h1: number;
     h2: number;
     h3: number;
@@ -46,7 +47,7 @@ export declare type FontSizes = {
     button: number;
     overline: number;
 };
-export declare type Contrasts = {
+declare type Contrasts = {
     h1: number;
     h2: number;
     h3: number;
@@ -61,7 +62,7 @@ export declare type Contrasts = {
     button: number;
     overline: number;
 };
-export declare type FontWeights = {
+declare type FontWeights = {
     h1: string;
     h2: string;
     h3: string;
@@ -76,7 +77,7 @@ export declare type FontWeights = {
     button: string;
     overline: string;
 };
-export declare type LetterSpacings = {
+declare type LetterSpacings = {
     h1: number;
     h2: number;
     h3: number;
@@ -91,17 +92,25 @@ export declare type LetterSpacings = {
     button: number;
     overline: number;
 };
-export declare type Typography = {
+declare type durations = {
+    small: number;
+    medium: number;
+    long: number;
+};
+declare type Typography = {
     fontSizes: FontSizes;
     contrasts: Contrasts;
     fontWeights: FontWeights;
     letterSpacings: LetterSpacings;
 };
-export declare type ThemeTypes = {
+export default interface ThemeTypes {
+    dark: boolean;
+    durations: durations;
+    roundness: number;
     gutter: number;
     color: Color;
-    spacing: (multiplier?: number) => number;
+    spacing: (multiplier?: number) => number | undefined;
     components: Components;
     typography: Typography;
-};
+}
 export {};

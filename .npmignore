@@ -21,11 +21,11 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-src/
-pages/
-android/
-ios/
-docs/
+src
+pages
+android
+ios
+docs
 docs/node_modules
 # Android/IntelliJ
 #

@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleProp, ImageStyle } from 'react-native';
 import { SurfaceProps } from './../Core/Surface';
 import { TextProps } from './../Core/Typography';
+import { ThemeTypes } from 'Theming';
 interface HeaderProps extends SurfaceProps {
     left?: React.FC<{
         size?: number;
@@ -21,5 +22,7 @@ interface WrapProps extends SurfaceProps {
     Content: React.FC<SurfaceProps>;
     Actions: React.FC<SurfaceProps>;
 }
-declare const Card: React.FC<SurfaceProps> & WrapProps;
+declare const Card: React.FC<SurfaceProps & {
+    theme?: ThemeTypes;
+}> & WrapProps;
 export default Card;

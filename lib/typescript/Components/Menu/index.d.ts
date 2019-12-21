@@ -8,6 +8,7 @@ interface MenuProps {
     render?: React.FC<renderType> | undefined;
     corderRadius?: number;
     duration?: number;
+    delay?: number;
     minWidth?: number;
     elevation?: number;
 }

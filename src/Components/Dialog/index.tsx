@@ -18,7 +18,6 @@ const DefaultSurface: SurfaceProps = {
   alignItems: 'flex-start',
   padding: [8, 16],
   margin: 0,
-  theme: {paper: {backgroundColor: 'transparent'}},
 };
 
 interface HeaderProps extends SurfaceProps {
@@ -170,7 +169,6 @@ const Dialog: React.FC<DialogProps> & WrapProps = ({
         <StatusBar backgroundColor="white" barStyle="dark-content" />
       )}
       <Surface
-        theme={{paper: {backgroundColor: 'white'}}}
         direction="column"
         padding={0}
         margin={0}

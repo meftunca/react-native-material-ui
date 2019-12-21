@@ -28,7 +28,8 @@ export {default as Dialog} from './Components/Dialog';
 export {
   ThemeProvider,
   withTheme,
-  defaultTheme,
+  LightTheme,
+  DarkTheme,
   useTheme,
   ThemeTypes,
 } from './Theming';

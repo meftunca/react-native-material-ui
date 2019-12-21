@@ -5,7 +5,7 @@ import Text, {TextProps} from 'Components/Core/Typography';
 import Color from 'color';
 import {ThemeTypes, useTheme} from 'Theming';
 
-interface AvatarTextProps {
+export interface AvatarTextProps {
   elevation?: number;
   size?: number;
   style?: StyleProp<ImageStyle>;

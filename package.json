@@ -1,9 +1,10 @@
 {
-  "name": "react-native-variant",
-  "version": "0.0.1",
+  "name": "@devloops/react-native-variant",
+  "version": "0.0.4",
   "private": false,
   "displayName": "react-native-variant",
   "description": "react-native material ui library",
+  "license": "MIT",
   "author": {
     "email": "buraksenturk25@gmail.com",
     "name": "Muhammed Burak Şentürk",
@@ -20,25 +21,23 @@
     "bottom navigation",
     "input",
     "textfield",
-    "surface"
+    "surface",
+    "web"
   ],
   "scripts": {
     "compile": "bob build",
     "android": "react-native run-android",
-    "storybook": "start-storybook -p 9009 -c .storybook",
-    "build:storybook": "build-storybook -c .storybook -o doc",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "build-storybook": "build-storybook",
-    "login-push": "npm login --registry=https://npm.pkg.github.com/;npm publish --access public"
+    "publish": "npm publish --access public"
   },
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
   "react-native": "./lib/commonjs/index.js",
   "types": "./lib/typescript/src/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "files": [
     "lib/",
@@ -116,7 +115,7 @@
       [
         "commonjs",
         {
-          "flow": true
+          "flow": false
         }
       ],
       "module",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleProp, ViewStyle, ImageStyle } from 'react-native';
-interface AvatarIconProps {
+import { ThemeTypes } from 'Theming';
+export interface AvatarIconProps {
     elevation?: number;
     size?: number;
     style?: StyleProp<ImageStyle>;
@@ -9,6 +10,7 @@ interface AvatarIconProps {
     color?: string;
     icon?: string;
     backgroundColor?: string;
+    theme?: ThemeTypes;
     iconFontFamily?: 'materialCommunity' | 'material' | 'simpleLine' | 'fa' | 'fa5' | 'fa5pro' | 'foundation' | 'evil' | 'octicons' | 'ionic' | 'feather' | 'entypo' | 'zocial';
 }
 declare const AvatarIcon: React.FC<AvatarIconProps>;

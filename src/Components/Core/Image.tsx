@@ -8,6 +8,8 @@ import {
   StyleProp,
   ViewStyle,
   ImagePropsBase,
+  ImageRequireSource,
+  ImageURISource,
 } from 'react-native';
 import {useAnimation} from 'Helpers/Hooks';
 
@@ -16,6 +18,7 @@ type ImageCustomPropsBase = ImagePropsBase & {
   containerStyle?: StyleProp<ViewStyle>;
   width?: number;
   ratio?: number;
+  source?: {uri?: string};
 };
 const Image: React.FC<ImageCustomPropsBase> = ({
   imageStyle,

@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 import {Provider as SettingsProvider, Settings} from './settings';
-import PortalHost from '../components/Portal/PortalHost';
 import {ThemeTypes, ThemeProvider} from './';
 
 type Props = {
@@ -11,7 +10,7 @@ type Props = {
 export default class Provider extends React.Component<Props> {
   render() {
     return (
-      <SettingsProvider value={this.props.settings}>
+      <SettingsProvider>
         <ThemeProvider theme={this.props.theme}>
           {this.props.children}
         </ThemeProvider>

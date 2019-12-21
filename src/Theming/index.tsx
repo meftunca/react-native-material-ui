@@ -6,4 +6,4 @@ import ThemeTypes from './ThemeTypes';
 const {ThemeProvider, withTheme, useTheme} = createTheming<ThemeTypes>(
   DarkTheme,
 );
-export {ThemeProvider, withTheme, useTheme, LightTheme, ThemeTypes};
+export {ThemeProvider, withTheme, useTheme, DarkTheme, LightTheme, ThemeTypes};

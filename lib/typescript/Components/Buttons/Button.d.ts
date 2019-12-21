@@ -10,8 +10,9 @@ export interface ButtonProps extends RippleProps {
     type?: 'button' | 'drawer' | 'dialog';
     role?: 'fab' | 'icon' | 'button';
     paperProps?: SurfaceProps;
-    color?: string;
-    radius?: number;
+    color?: string | 'primary' | 'secondary';
+    cornerRadius?: number;
+    elevation?: number;
     size?: number;
     dense?: boolean;
     fullWidth?: boolean;
@@ -20,7 +21,7 @@ export interface ButtonProps extends RippleProps {
     transform?: 'none' | 'capitalize' | 'uppercase' | 'lowercase';
     icon?: string;
     theme?: object;
-    contentContainerStyle?: StyleProp<ViewStyle>;
+    containerStyle?: StyleProp<ViewStyle>;
     style?: StyleProp<ViewStyle>;
     rippleStyle?: StyleProp<ViewStyle>;
     buttonRef?: any;

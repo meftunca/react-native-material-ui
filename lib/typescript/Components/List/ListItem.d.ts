@@ -1,25 +1,21 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
-import { TextProps } from './../Core/Typography';
+import { TextProps } from 'Components/Core/Typography';
 import { RippleProps } from 'Components/Core/Ripple';
+import { ThemeTypes } from 'Theming';
 declare type listHorizontalItemType = (props: {
     color?: string;
     size?: number;
     dense?: boolean;
     style?: {};
+    containerStyle?: {};
 }) => React.ReactNode;
-declare type themeProps = {
-    color?: {
-        primaryText?: string;
-        secondaryText?: string;
-    };
-};
 export interface ListItemProps extends RippleProps {
     containerStyle?: StyleProp<ViewStyle>;
     left?: listHorizontalItemType;
     right?: listHorizontalItemType;
     padding?: number[] | number;
-    type?: 'avatar' | 'radio' | 'checkbox' | undefined;
+    type?: 'largeImage' | 'image' | 'avatar' | 'radio' | 'checkbox' | 'icon' | undefined;
     margin?: number[] | string;
     color?: string;
     dense?: boolean;
@@ -27,7 +23,7 @@ export interface ListItemProps extends RippleProps {
     subtitle?: string;
     titleProps?: TextProps;
     subtitleProps?: TextProps;
-    theme?: themeProps;
+    theme?: ThemeTypes;
 }
 declare const ListItem: React.FC<ListItemProps>;
 export default ListItem;

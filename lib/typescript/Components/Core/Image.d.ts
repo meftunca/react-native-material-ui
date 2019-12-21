@@ -1,9 +1,13 @@
-import { ImageStyle } from 'react-native';
-declare type ImageCustomPropsBase = {
-    source: any;
-    style?: ImageStyle;
+import React from 'react';
+import { ImageStyle, StyleProp, ViewStyle, ImagePropsBase } from 'react-native';
+declare type ImageCustomPropsBase = ImagePropsBase & {
+    imageStyle?: StyleProp<ImageStyle>;
+    containerStyle?: StyleProp<ViewStyle>;
     width?: number;
-    ratio?: '1:1' | '4:3' | '1:1.91';
+    ratio?: number;
+    source?: {
+        uri?: string;
+    };
 };
-declare const Image: ({ style, source }: ImageCustomPropsBase) => JSX.Element;
+declare const Image: React.FC<ImageCustomPropsBase>;
 export default Image;

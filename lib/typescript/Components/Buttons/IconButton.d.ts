@@ -11,10 +11,9 @@ export interface IconButtonProps extends RippleProps {
     string | ('primary' | 'secondary' | 'accent' | 'error' | 'warning' | 'text');
     backgroundColor?: string;
     size?: number;
-    onLayout?: any;
     icon?: string;
     theme?: object;
-    contentContainerStyle?: StyleProp<ViewStyle>;
+    containerStyle?: StyleProp<ViewStyle>;
     style?: StyleProp<ViewStyle>;
     rippleStyle?: StyleProp<ViewStyle>;
 }

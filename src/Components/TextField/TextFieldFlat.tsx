@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import * as Palette from '../../Helpers/palette';
 import BottomBar from './BottomHelper';
-interface TextFieldFlatProps extends TextInputProps {
+export interface TextFieldFlatProps extends TextInputProps {
   defaultValue?: string;
   value?: string;
   label?: string;

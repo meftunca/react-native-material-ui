@@ -10,7 +10,7 @@ import {
 import {elevationShadowStyle} from 'Helpers/styleGenerator';
 import {ThemeTypes, useTheme} from 'Theming';
 
-interface AvatarImageProps extends ImageProps {
+export interface AvatarImageProps extends ImageProps {
   elevation?: number;
   size?: number;
   containerStyle?: StyleProp<ViewStyle>;

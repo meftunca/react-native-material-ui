@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {TextProps} from 'Components/Core/Typography';
 import Alert from 'Components/PopUp/Alert';
 import Snackbar from 'Components/PopUp/Snackbar';
@@ -47,7 +47,7 @@ const DefaultSettings = {
 };
 const SettingsContext = React.createContext<Settings>(DefaultSettings);
 
-export const Provider: React.FC<Settings> = ({children}) => {
+export const Provider: React.FC<{value?: Settings}> = ({children}) => {
   const [alertData, setAlertData] = React.useState<AlertType>({
     header: undefined,
     prompt: false,

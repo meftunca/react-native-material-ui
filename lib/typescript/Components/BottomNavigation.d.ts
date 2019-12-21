@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeTypes } from 'Theming';
 interface BottomNavigationProps {
     config?: {
         initialScene?: string;
@@ -22,6 +23,7 @@ interface BottomNavigationProps {
     color?: string;
     secondary?: boolean;
     top?: any;
+    theme?: ThemeTypes;
 }
 declare const BottomNavigation: React.FC<BottomNavigationProps>;
 export default BottomNavigation;

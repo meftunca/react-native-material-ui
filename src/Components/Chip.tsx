@@ -110,7 +110,7 @@ const Chip: React.FC<ChipProps> = ({
           ) : null}
           <Text
             style={{...style.text}}
-            color={colorAnimate}
+            color={colorAnimate.toString()}
             animated
             variant="subtitle1">
             {label}

@@ -22,4 +22,6 @@ export { default as TextField } from './Components/TextField';
 export { default as Menu } from './Components/Menu';
 export { default as Card } from './Components/Card';
 export { default as Dialog } from './Components/Dialog';
-export { ThemeProvider, withTheme, defaultTheme, useTheme, ThemeTypes, } from './Theming';
+export { ThemeProvider, withTheme, LightTheme, DarkTheme, useTheme, ThemeTypes, } from './Theming';
+export { useAlert, useSnackbar } from './Theming/settings';
+export { default as Provider } from './Theming/Provider';
