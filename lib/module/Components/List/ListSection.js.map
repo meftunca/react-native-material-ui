@@ -1,1 +1,0 @@
-{"version":3,"sources":["ListSection.tsx"],"names":["React"],"mappings":"AAAA,MAAOA,CAAAA,KAAP,KAAkB,OAAlB,CAEA,eAAe,UAAM,CACnB,MAAO,yCAAP,CACD,CAFD","sourcesContent":["import React from 'react';\n\nexport default () => {\n  return <></>;\n};\n"]}

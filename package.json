@@ -1,6 +1,6 @@
 {
   "name": "@devloops/react-native-variant",
-  "version": "0.0.8",
+  "version": "0.2.2",
   "private": false,
   "displayName": "react-native-variant",
   "description": "react-native material ui library",
@@ -27,6 +27,7 @@
   ],
   "scripts": {
     "compile": "bob build",
+    "babel:compile": "babel --no-babelrc --config-file=./babel.config.publish.js --extensions '.js,jsx.ts,.tsx'  src --ignore '**/__tests__/**' --copy-files --delete-dir-on-start --out-dir lib/common && del-cli 'lib/**/__tests__' && yarn tsc ",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
@@ -36,39 +37,39 @@
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
   "react-native": "./lib/commonjs/index.js",
-  "types": "./lib/typescript/src/index.d.ts",
+  "types": "./lib/typescript/index.d.ts",
+  "typings": "./lib/typescript/index.d.ts",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "src/"
+    "lib/"
   ],
-  "rnpm": {
-    "assets": [
-      "./src/Fonts/Roboto"
-    ]
-  },
   "dependencies": {
     "@callstack/react-theme-provider": "^3.0.5",
     "color": "^3.1.2"
   },
   "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
     "react-native-gesture-handler": "^1.5.2",
     "react-native-reanimated": "^1.4.0",
     "react-native-safe-area-context": "^0.6.1",
     "react-native-safe-area-view": "^1.0.0",
-    "react-native-vector-icons": "^6.6.0",
-    "react": "*",
-    "react-native": "*"
+    "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-syntax-jsx": "^7.7.4",
     "@babel/plugin-transform-modules-commonjs": "^7.7.5",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-flow": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.7",
     "@babel/runtime": "^7.7.7",
     "@react-native-community/bob": "^0.7.0",
     "@react-native-community/eslint-config": "^0.0.5",
@@ -84,6 +85,7 @@
     "@types/react-test-renderer": "16.9.1",
     "babel-jest": "^24.9.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-typescript-to-proptypes": "^1.1.0",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.57.0",
     "module-alias": "^2.2.2",
@@ -93,8 +95,8 @@
     "react-native-reanimated": "^1.4.0",
     "react-native-safe-area-context": "^0.6.1",
     "react-native-safe-area-view": "^1.0.0",
-    "react-native-vector-icons": "^6.6.0",
     "react-native-screens": "^2.0.0-alpha.22",
+    "react-native-vector-icons": "^6.6.0",
     "react-test-renderer": "16.12.0",
     "typescript": "^3.7.4"
   },
@@ -116,11 +118,14 @@
       [
         "commonjs",
         {
-          "flow": false
+          "flow": true
         }
       ],
       "module",
       "typescript"
+    ],
+    "files": [
+      "src/"
     ]
   },
   "detox": {

@@ -1,31 +1,11 @@
-// import {configure, addDecorator} from '@storybook/react';
-// import {configureViewport} from '@storybook/addon-viewport';
-// import {withOptions} from '@storybook/addon-options';
-// import {withKnobs} from '@storybook/addon-knobs';
-
-// function loadStories() {
-//   const req = require.context('../stories', true, /\.story\.(jsx|tsx|ts|js)?$/);
-//   req.keys().forEach(story => req(story));
-// }
-
-// addDecorator(
-//   withOptions({
-//     addonPanelInRight: true,
-//   }),
-//   withKnobs({
-//     escapeHTML: false,
-//   }),
-// );
-
-// configure(loadStories, module);
-// configureViewport({
-//   defaultViewport: 'iphone6p',
-// });
-import {create} from '@storybook/theming';
-
-// import centered from './decorator-centered';
+import theme from './theme';
 import {addParameters, configure, addDecorator} from '@storybook/react';
+import ReactThemeProvider from './ReactThemeProvider';
+import {DocsPage, DocsContainer} from '@storybook/addon-docs/blocks';
+import {withInfo} from '@storybook/addon-info';
 
+addDecorator(withInfo);
+addDecorator(ReactThemeProvider);
 // Option defaults:
 addParameters({
   options: {
@@ -35,13 +15,11 @@ addParameters({
 
       return sectionB.localeCompare(sectionA);
     },
-    theme: create({
-      base: 'dark',
-      brandTitle: 'React Native Material UI',
-      brandUrl: 'https://meftunca.github.io/react-native-mui',
-      // To control appearance:
-      // brandImage: 'http://url.of/some.svg',
-    }),
+    docs: {
+      container: DocsContainer,
+      page: DocsPage,
+    },
+    theme: theme,
     /**
      * regex for finding the hierarchy separator
      * @example:
@@ -49,7 +27,6 @@ addParameters({
      *   /\// - split by `/`
      *   /\./ - split by `.`
      *   /\/|\./ - split by `/` or `.`
-     * @type {Regex}
      */
     hierarchySeparator: /\/|\./,
     /**
@@ -57,19 +34,19 @@ addParameters({
      * @example:
      *   null - turn off multiple hierarchy roots
      *   /\|/ - split by `|`
-     * @type {Regex}
      */
     hierarchyRootSeparator: /\|/,
     panelPosition: 'bottom',
+    goFullScreen: false,
+    showLeftPanel: true,
+    showDownPanel: false,
+    showSearchBox: false,
+    downPanelInRight: false,
   },
 });
 
 // addDecorator(centered);
 
-const context = require.context(
-  '../stories',
-  true,
-  /\.stories\.(ts|tsx|jsx|js|mdx)$/,
-);
+const context = require.context('../stories', true, /\.stories\.(ts|js|md)x$/);
 
 configure(context, module);

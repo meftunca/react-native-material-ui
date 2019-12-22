@@ -9,12 +9,15 @@
     "lib": ["esnext", "dom"],
     "inlineSourceMap": false,
     "inlineSources": false,
-    "module": "esnext",
+    "module": "ESNext",
     "sourceMap": false,
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noImplicitUseStrict": false,
+    "declaration": true,
+    "declarationMap": false,
+    "declarationDir": "./lib/typescript",
     "noStrictGenericChecks": false,
     "noUnusedParameters": false,
     "resolveJsonModule": true,
@@ -25,7 +28,9 @@
     "baseUrl": "./src",
     "rootDirs": ["src", "stories"],
     "allowJs": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./node_modules/@types/", "./lib/typescript/"],
+    "outDir": "lib/module"
   },
   "include": ["src"],
   "exclude": [

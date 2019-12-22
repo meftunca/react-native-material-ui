@@ -1,0 +1,31 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta,Props} from '@storybook/addon-docs/blocks';
+import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import {Button} from '@devloops/react-native-variant';
+import ButtonPage from "./Button"
+
+<Meta title='Button' component={ButtonPage} />
+
+# Hello Docs
+
+Welcome to the future of Storybook!
+
+<Story name="text">
+  <Button onPress={action('clicked')}>Hello text button!</Button>
+</Story>
+
+<Button onPress={action('clicked')}>Hello text button!</Button>
+
+## Props
+
+<Props of={ButtonPage}/>
+
+<Story name="contained">
+  <Button variant="contained" onPress={action('clicked')}>Hello contained button!</Button>
+</Story>
+
+<Story name="outlined">
+  <Button icon="plus" variant="outlined" onPress={action('clicked')}>Hello outlined button!</Button>
+</Story>
+
+
