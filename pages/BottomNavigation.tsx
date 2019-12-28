@@ -13,12 +13,29 @@ const BottomNavigationPage = ({}) => {
           console.log('sceneKey', sceneKey);
         }}
       />
+      <BottomNavigation
+        actions={actions}
+        config={{
+          labelHidden: true,
+          labelDirection: 'row',
+          initialScene: 'Home',
+        }}
+        secondary={true}
+      />
+      <BottomNavigation
+        actions={actions}
+        config={{
+          labelHidden: true,
+          labelDirection: 'row-reverse',
+          initialScene: 'Home',
+        }}
+        color="blue"
+      />
+      <BottomNavigation actions={actions} config={config3} color="white" />
     </View>
   );
 };
-// <BottomNavigation actions={actions} config={config2} secondary={true} />
-// <BottomNavigation actions={actions} config={config2_2} color="blue" />
-// <BottomNavigation actions={actions} config={config3} color="white" />
+
 export default BottomNavigationPage;
 
 const scenes: Array<{key?: string; Scene?: React.ReactNode}> = [
@@ -50,6 +67,7 @@ const config1 = {
 const config2 = {
   labelHidden: true,
   labelDirection: 'row',
+  initialScene: 'Home',
 };
 const config2_2 = {
   labelHidden: true,

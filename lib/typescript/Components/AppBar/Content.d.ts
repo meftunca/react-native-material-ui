@@ -1,10 +1,10 @@
 import React from 'react';
 export interface AppBarContentProps {
-    primary?: string;
-    secondary?: string;
+    title?: string;
+    subtitle?: string;
     color?: string;
-    secondaryProps?: any;
-    primaryProps?: any;
+    subtitleProps?: any;
+    titleProps?: any;
 }
 declare const Content: React.FC<AppBarContentProps>;
 export default Content;

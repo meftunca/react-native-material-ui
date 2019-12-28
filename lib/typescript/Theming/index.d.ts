@@ -1,7 +1,7 @@
 /// <reference types="react" />
 import LightTheme from './LightTheme';
 import DarkTheme from './DarkTheme';
-import ThemeTypes from './ThemeTypes';
+import { ThemeTypes } from './ThemeTypes';
 declare const ThemeProvider: import("react").ComponentType<{
     theme?: ThemeTypes;
 }>, withTheme: <Props extends {

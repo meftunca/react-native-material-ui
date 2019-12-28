@@ -1,0 +1,72 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta, Props, Preview} from '@storybook/addon-docs/blocks';
+import {withKnobs, select, boolean} from '@storybook/addon-knobs';
+import {AppBar} from '@devloops/react-native-variant';
+import {AppBarProps, ActionProps, ContentProps} from './AppBarProps.js';
+
+<Meta title="Components|AppBar" component={AppBar} />
+
+## Basic Usage
+
+<Story name="Basic">
+  <AppBar>
+    <AppBar.Action icon="menu" onPress={() => console.log('Pressed archive')} />
+    <AppBar.Content title="Başlık" subtitle="Alt Başlık" />
+  </AppBar>
+</Story>
+
+```js dark
+<AppBar>
+  <AppBar.Action icon="menu" onPress={() => console.log('Pressed archive')} />
+  <AppBar.Content title="Başlık" subtitle="Alt Başlık" />
+</AppBar>
+```
+
+<Props of={AppBarProps} />
+
+## Content Usage
+
+<Story name="Content">
+  <AppBar>
+    <AppBar.Content title="Başlık" subtitle="Alt Başlık" />
+  </AppBar>
+</Story>
+
+```js dark
+<AppBar>
+  <AppBar.Content title="Başlık" subtitle="Alt Başlık" />
+</AppBar>
+```
+
+<Props of={ContentProps} />
+
+## Action Usage
+
+<Story name="Actions">
+  <AppBar>
+    <AppBar.Action
+      icon="archive"
+      onPress={() => console.log('Pressed archive')}
+    />
+    <AppBar.Action icon="mail" onPress={() => console.log('Pressed mail')} />
+    <AppBar.Action icon="label" onPress={() => console.log('Pressed label')} />
+    <AppBar.Action
+      icon="delete"
+      onPress={() => console.log('Pressed delete')}
+    />
+  </AppBar>
+</Story>
+
+```js dark
+<AppBar>
+  <AppBar.Action
+    icon="archive"
+    onPress={() => console.log('Pressed archive')}
+  />
+  <AppBar.Action icon="mail" onPress={() => console.log('Pressed mail')} />
+  <AppBar.Action icon="label" onPress={() => console.log('Pressed label')} />
+  <AppBar.Action icon="delete" onPress={() => console.log('Pressed delete')} />
+</AppBar>
+```
+
+<Props of={ActionProps} />

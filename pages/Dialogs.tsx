@@ -4,6 +4,7 @@ import {Surface, Card, Text, Image, Button, Palette, Dialog} from './../src';
 const DialogsPage = () => {
   const [alertDialog, setAlertDialog] = useState(false);
   const [defaultDialog, setDefaultDialog] = useState(false);
+  console.log('alertDialog', defaultDialog);
   return (
     <>
       <Button

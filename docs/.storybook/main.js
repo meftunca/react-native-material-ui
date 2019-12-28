@@ -6,18 +6,35 @@ module.exports = {
       name: '@storybook/addon-docs/react/preset',
       options: {
         configureJSX: true,
-        babelOptions: {},
-        sourceLoaderOptions: null,
+        // babelOptions: {},
+        // sourceLoaderOptions: null,
       },
     },
     {
       name: '@storybook/preset-typescript',
       options: {
-        tsDocgenLoaderOptions: {
-          tsconfigPath: path.resolve(__dirname, 'tsconfig.json'),
+        tsLoaderOptions: {
+          configFile: path.resolve(__dirname, '/tsconfig.json'),
+          transpileOnly: true,
         },
+        tsDocgenLoaderOptions: {
+          tsconfigPath: path.resolve(__dirname, '.tsconfig.json'),
+        },
+        include: [
+          path.resolve(__dirname, '../stories'),
+          path.resolve(__dirname, '../src'),
+        ],
       },
     },
+    // {
+    //   name: '@storybook/preset-typescript',
+    //   options: {
+    //     tsDocgenLoaderOptions: {
+    //       tsconfigPath: path.resolve(__dirname, 'tsconfig.json'),
+    //     },
+    //     transpileManager: true,
+    //   },
+    // },
   ],
-  stories: ['../src/**/*.stories.(js|ts|md)x'],
+  stories: ['../stories/**/*.stories.(ts|tsx|jsx|js|mdx)'],
 };

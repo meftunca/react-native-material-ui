@@ -1,0 +1,75 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta, Props, Preview} from '@storybook/addon-docs/blocks';
+import {withKnobs, select, boolean} from '@storybook/addon-knobs';
+import {View} from 'react-native';
+import ChipPage from './ChipPage.tsx';
+
+<Meta title="Components|Chip" />
+
+## Example Usage
+
+<br />
+<ChipPage />
+
+```js dark
+//With Selectable
+<View style={{flexDirection: 'row', padding: 16}}>
+    <Chip
+        label="Deneme"
+        isSelected={state === 0}
+        selectedIcon="check"
+        onSelect={() => setState(state === 0 ? null : 0)}
+    />
+    <Chip
+        variant="flat"
+        label="Deneme"
+        isSelected={state === 1}
+        selectedIcon="check"
+        onSelect={() => setState(state === 1 ? null : 1)}
+    />
+</View>
+
+//With Icon
+<View style={{flexDirection: 'row', padding: 16}}>
+    <Chip icon="check" label="Deneme" />
+    <Chip icon="check" variant="flat" label="Deneme" />
+</View>
+
+//With Action
+<View style={{flexDirection: 'row', padding: 16}}>
+    <Chip
+        icon="check"
+        label="Deneme"
+        action={({...props}) => <IconButton {...props} icon="close" />}
+    />
+    <Chip
+        icon="check"
+        variant="flat"
+        label="Deneme"
+        action={({...props}) => <IconButton {...props} icon="close" />}
+    />
+</View>
+
+//With Avatar
+<View style={{flexDirection: 'row', padding: 16}}>
+    <Chip
+        avatarSource={{
+        uri:
+            'https://material.io/archive/guidelines/assets/0Bx4BSt6jniD7SUIwTFk3c21ndFU/style-imagery-principles4.png',
+        cache: 'force-cache',
+        }}
+        label="Deneme"
+        action={({...props}) => <IconButton {...props} icon="close" />}
+    />
+    <Chip
+        avatarSource={{
+        uri:
+            'https://material.io/archive/guidelines/assets/0Bx4BSt6jniD7SUIwTFk3c21ndFU/style-imagery-principles4.png',
+        cache: 'force-cache',
+        }}
+        variant="flat"
+        label="Deneme"
+        action={({...props}) => <IconButton {...props} icon="close" />}
+    />
+</View>
+```

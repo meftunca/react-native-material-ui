@@ -14,7 +14,6 @@ module.exports = [
       tsDocgenLoaderOptions: {
         tsconfigPath: path.resolve(__dirname, 'tsconfig.json'),
       },
-      include: [require.resolve('@devloops/react-native-variant')],
     },
   },
 ];

@@ -1,0 +1,246 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta,Props,Preview} from '@storybook/addon-docs/blocks';
+import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import {IconButton,List,Avatar,Palette,FAB} from '@devloops/react-native-variant';
+import {List as ListProps} from "./ListProps.js"
+
+<Meta title='Components|List/Item' component={IconButton}  />
+
+## Basic Usage 
+
+<Story name="basic">
+    <div style={{display:"flex",flexDirection:"column"}}>
+        {Array(3)
+            .fill('')
+            .map((i, k) => (
+            <List.Item
+                key={k}
+                title={'item ' + (k + 1)}
+            />
+            ))}
+    </div>
+</Story>    
+    
+
+```js dark
+<List.Item
+    title={'item'}
+    />
+```
+
+
+## Basic SubTitle Usage 
+
+<Story name="basicSubtitle">
+    <div style={{display:"flex",flexDirection:"column"}}>
+        {Array(3)
+            .fill('')
+            .map((i, k) => (
+            <List.Item
+                key={k}
+                title={'item ' + (k + 1)}
+                subtitle={'Subtitle ' + (k + 1)}
+            />
+            ))}
+    </div>
+</Story>    
+    
+
+```js dark
+<List.Item
+    title={'item'}
+    subtitle={'Subtitle'}
+    />
+```
+## Basic Left Side Usage 
+
+<Story name="basicLeftSide">
+    <div style={{display:"flex",flexDirection:"column"}}>
+        <List.Item
+        title={'item'}
+        type="avatar"
+        subtitle={'Subtitle'}
+        left={({...props}) => (
+            <Avatar.Text
+                {...props}
+                size={32}
+                label="MB"
+            />
+            )}
+        />
+        <List.Item
+        title={'item'}
+        type="avatar"
+        subtitle={'Subtitle'}
+        left={({...props}) => (
+                <Avatar.Image
+                    {...props}
+                    size={40}
+                    source={{
+                    uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+                    cache: 'force-cache',
+                    }}
+                />
+                )}
+        />
+        <List.Item
+        title={'item'}
+        type="avatar"
+        subtitle={'Subtitle'}
+        left={({...props}) => (
+        <Avatar.Icon
+            {...props}
+            size={40}
+            icon="add"
+            color="white"
+            backgroundColor={Palette.orange500}
+            />
+            )}
+        />
+    </div>
+</Story>    
+    
+
+```js dark
+<List.Item
+title={'item'}
+type="avatar"
+subtitle={'Subtitle'}
+left={({...props}) => (
+    <Avatar.Text
+        {...props}
+        size={32}
+        label="MB"
+    />
+    )}
+/>
+<List.Item
+title={'item'}
+type="avatar"
+subtitle={'Subtitle'}
+left={({...props}) => (
+            <Avatar.Image
+            {...props}
+            size={40}
+            source={{
+                uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+                cache: 'force-cache',
+            }}
+            />
+        )}
+/>
+<List.Item
+title={'item'}
+type="avatar"
+subtitle={'Subtitle'}
+left={({...props}) => (
+    <Avatar.Icon
+        {...props}
+        size={40}
+        icon="add"
+        color="white"
+        backgroundColor={Palette.orange500}
+        />
+)}
+/>
+```
+## Basic Right Side Usage 
+
+<Story name="basicRightSide">
+    <div style={{display:"flex",flexDirection:"column"}}>
+        <List.Item
+        type="avatar"
+        title={'item'}
+        subtitle={'Subtitle'}
+        right={({...props}) => (
+            <Avatar.Text
+                {...props}
+                size={32}
+                label="MB"
+            />
+            )}
+        />
+        <List.Item
+        type="avatar"
+        title={'item'}
+        subtitle={'Subtitle'}
+        right={({...props}) => (
+                <Avatar.Image
+                    {...props}
+                    size={40}
+                    source={{
+                    uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+                    cache: 'force-cache',
+                    }}
+                />
+                )}
+        />
+        <List.Item
+        type="avatar"
+        title={'item'}
+        subtitle={'Subtitle'}
+        right={({...props}) => (
+            <Avatar.Icon
+                {...props}
+                size={40}
+                icon="add"
+                color="white"
+                backgroundColor={Palette.orange500}
+                />
+                )}
+        />
+    </div>
+</Story>    
+    
+
+```js dark
+<List.Item
+type="avatar"
+title={'item'}
+subtitle={'Subtitle'}
+right={({...props}) => (
+    <Avatar.Text
+        {...props}
+        size={32}
+        label="MB"
+    />
+    )}
+/>
+<List.Item
+type="avatar"
+title={'item'}
+subtitle={'Subtitle'}
+right={({...props}) => (
+            <Avatar.Image
+            {...props}
+            size={40}
+            source={{
+                uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+                cache: 'force-cache',
+            }}
+            />
+        )}
+/>
+<List.Item
+type="avatar"
+title={'item'}
+subtitle={'Subtitle'}
+lerightft={({...props}) => (
+    <Avatar.Icon
+        {...props}
+        size={40}
+        icon="add"
+        color="white"
+        backgroundColor={Palette.orange500}
+        />
+        )}
+/>
+```
+
+
+
+<Story name="Props">
+    <h4>Props</h4>
+</Story>    
+
+<Props of={ListProps}/>

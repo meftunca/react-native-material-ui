@@ -1,3 +1,4 @@
+/// <reference types="react" />
 declare const PaginationItem: ({ active }: {
     active?: boolean;
     color?: string;

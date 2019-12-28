@@ -1,13 +1,11 @@
 // @ts-nocheck
 import React from 'react';
-import {ThemeProvider, DarkTheme} from '@devloops/react-native-variant';
+import {Provider, DarkTheme} from '@devloops/react-native-variant';
 import {StyleSheet, View} from 'react-native';
-
 // Generate required css
-import iconFont from 'react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf';
-console.log('iconFont :', iconFont);
+
 const iconFontStyles = `@font-face {
-  src: url(?path=/${iconFont});
+  src: url(?path=/${require('react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf')});
   font-family: MaterialCommunityIcons;
 }`;
 
@@ -32,8 +30,8 @@ const styles = StyleSheet.create({
 
 export default function(renderStory) {
   return (
-    <ThemeProvider theme={DarkTheme}>
+    <Provider theme={DarkTheme}>
       <View style={styles.root}>{renderStory()}</View>
-    </ThemeProvider>
+    </Provider>
   );
 }

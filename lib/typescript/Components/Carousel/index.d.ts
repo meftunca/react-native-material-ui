@@ -1,3 +1,4 @@
+/// <reference types="react" />
 declare const Carousel: ({ imgData }: {
     imgData?: any;
 }) => JSX.Element;

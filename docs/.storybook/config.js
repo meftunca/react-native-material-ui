@@ -1,11 +1,19 @@
+// @ts-nocheck
 import theme from './theme';
 import {addParameters, configure, addDecorator} from '@storybook/react';
 import ReactThemeProvider from './ReactThemeProvider';
 import {DocsPage, DocsContainer} from '@storybook/addon-docs/blocks';
-import {withInfo} from '@storybook/addon-info';
+// import {withInfo} from '@storybook/addon-info';
+import {INITIAL_VIEWPORTS} from '@storybook/addon-viewport';
 
-addDecorator(withInfo);
-addDecorator(ReactThemeProvider);
+addParameters({
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+    defaultViewport: 'iphone6',
+  },
+});
+// addDecorator(withInfo);
+addDecorator(ReactThemeProvider); //tema desteğini ayarla
 // Option defaults:
 addParameters({
   options: {
@@ -35,13 +43,14 @@ addParameters({
      *   null - turn off multiple hierarchy roots
      *   /\|/ - split by `|`
      */
+    // @ts-ignore
     hierarchyRootSeparator: /\|/,
-    panelPosition: 'bottom',
+    panelPosition: 'right',
     goFullScreen: false,
     showLeftPanel: true,
     showDownPanel: false,
-    showSearchBox: false,
-    downPanelInRight: false,
+    showSearchBox: true,
+    downPanelInRight: true,
   },
 });
 

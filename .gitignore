@@ -29,7 +29,9 @@ docs/node_modules
 .gradle
 local.properties
 *.iml
-
+# Jest
+#
+.jest/
 # Visual Studio Code
 #
 .vscode/

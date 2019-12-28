@@ -103,7 +103,7 @@ declare type Typography = {
     fontWeights: FontWeights;
     letterSpacings: LetterSpacings;
 };
-export default interface ThemeTypes {
+export declare type ThemeTypes = {
     dark: boolean;
     durations: durations;
     roundness: number;
@@ -112,5 +112,5 @@ export default interface ThemeTypes {
     spacing: (multiplier?: number) => number | undefined;
     components: Components;
     typography: Typography;
-}
+};
 export {};

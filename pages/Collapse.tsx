@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const CollapsePage = () => {
   const [expanded, setExpanded] = useState(false);
+  console.log('expanded', expanded);
   return (
     <SafeAreaView>
       <Ripple

@@ -15,10 +15,10 @@ import Router from './pages';
 
 const App = () => {
   return (
-    <>
+    <React.Fragment>
       <StatusBar barStyle="dark-content" />
       <Router />
-    </>
+    </React.Fragment>
   );
 };
 

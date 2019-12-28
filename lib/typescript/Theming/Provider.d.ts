@@ -1,6 +1,6 @@
 import React from 'react';
 import { Settings } from './settings';
-import { ThemeTypes } from './';
+import { ThemeTypes } from '.';
 declare type Props = {
     children: React.ReactNode;
     theme?: ThemeTypes;

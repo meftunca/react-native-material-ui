@@ -1,0 +1,97 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta,Props,Preview} from '@storybook/addon-docs/blocks';
+import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import {Button} from '@devloops/react-native-variant';
+import {Button as Btn} from './ButtonProps';
+
+<Meta title='Components|Buttons/Default Button' component={Button}  />
+
+# Buttons
+
+<br/>
+<br/>
+
+## Text Button
+
+<Story name="text">
+    <div style={{display:"flex",flexDirection:"column",flexWrap:"wrap",minHeight:200,justifyContent:"space-between",margin:36}}>
+        <Button color="teal" onPress={()=>console.log('clicked')}>Hello text button!</Button>
+        <Button color="orange" onPress={()=>console.log('clicked')}>Hello text button!</Button>
+        <Button color="green" onPress={()=>console.log('clicked')}>Hello text button!</Button>
+    </div>
+</Story>
+
+
+```js dark
+
+<Button color="teal" onPress={()=>console.log('clicked')}>Hello text button!</Button>
+<Button color="orange" onPress={()=>console.log('clicked')}>Hello text button!</Button>
+<Button color="green" onPress={()=>console.log('clicked')}>Hello text button!</Button>
+```
+
+
+## Outlined Button
+
+<Story name="outlined">
+   <div style={{display:"flex",flexDirection:"column",flexWrap:"wrap",minHeight:200,justifyContent:"space-between",margin:36}}>
+  <Button color="blue" variant="outlined" onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+  <Button color="black" variant="outlined" onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+  <Button color="purple" variant="outlined"  onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+  </div>
+</Story>
+
+```js dark
+<Button color="blue" variant="outlined" onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+<Button color="black" variant="outlined" onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+<Button color="purple" variant="outlined"  onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+```
+
+## Contained Button
+
+<Story name="contained">
+   <div style={{display:"flex",flexDirection:"column",flexWrap:"wrap",minHeight:200,justifyContent:"space-between",margin:36}}>
+<Button color="red" variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+<Button color="green" variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+<Button color="teal" variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+  </div>
+</Story>
+
+```js dark
+<Button color="red" variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+<Button color="green" variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+<Button color="teal" variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+```
+
+## Rounded Button
+
+<Story name="rounded">
+   <div style={{display:"flex",flexDirection:"column",flexWrap:"wrap",minHeight:200,justifyContent:"space-between",margin:36}}>
+    <Button color="red" cornerRadius={30} containerStyle={{backgroundColor:"rgba(0,0,0,.1)"}} onPress={()=>console.log('clicked')}>Hello text button!</Button>
+    <Button color="red" cornerRadius={16} variant="outlined" onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+    <Button color="red" cornerRadius={8} variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+  </div>
+</Story>
+
+```js dark
+<Button color="red" cornerRadius={30} containerStyle={{backgroundColor:"rgba(0,0,0,.1)"}} onPress={()=>console.log('clicked')}>Hello text button!</Button>
+<Button color="red" cornerRadius={16} variant="outlined" onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+<Button color="red" cornerRadius={8} variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+```
+## Icon With Button
+
+<Story name="iconWithButton">
+   <div style={{display:"flex",flexDirection:"column",flexWrap:"wrap",minHeight:200,justifyContent:"space-between",margin:36}}>
+    <Button icon="bookmarks" color="red" cornerRadius={30} containerStyle={{backgroundColor:"rgba(0,0,0,.1)"}} onPress={()=>console.log('clicked')}>Hello text button!</Button>
+    <Button icon="bookmarks" color="red" cornerRadius={16} variant="outlined" onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+    <Button icon="bookmarks" color="red" cornerRadius={8} variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+  </div>
+</Story>
+
+```js dark
+<Button color="red" cornerRadius={30} containerStyle={{backgroundColor:"rgba(0,0,0,.1)"}} onPress={()=>console.log('clicked')}>Hello text button!</Button>
+<Button color="red" cornerRadius={16} variant="outlined" onPress={()=>console.log('clicked')}>Hello outlined button!</Button>
+<Button color="red" cornerRadius={8} variant="contained" onPress={()=>console.log('clicked')}>Hello contained button!</Button>
+```
+
+
+<Props of={Btn}/>

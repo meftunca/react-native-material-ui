@@ -4,13 +4,30 @@
 
 
 src
+src_core
+public
 pages
 android
 ios
 docs
 docs/node_modules
 e2e
-
+app.json
+App.tsx
+babel.config.publish.js
+babel.config.js
+config.overrides.js
+jest.config.js
+metro.config.js
+react-native.config.js
+.buckconfig.js
+.eslintignore
+.eslintrc.js
+.watchmanconfig
+.prettierrc.js
+# Jest
+#
+.jest/
 
 # Visual Studio Code
 #

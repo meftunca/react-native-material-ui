@@ -1,15 +1,6 @@
 import React from 'react';
 import {View, ScrollView} from 'react-native';
-import {
-  Ripple,
-  Collapse,
-  Avatar,
-  Button,
-  List,
-  Text,
-  IconButton,
-  Palette,
-} from './../src';
+import {Avatar, List, IconButton, Palette} from './../src';
 export default () => {
   return (
     <ScrollView>

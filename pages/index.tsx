@@ -7,7 +7,7 @@ import ButtonPage from './Button';
 import SurfacePage from './Surface';
 import TextField from './TextField';
 import {useSafeArea} from 'react-native-safe-area-context';
-import {Button, Palette, ThemeProvider, Provider, IconButton} from './../src';
+import {Button, Palette, Provider, IconButton} from '../src';
 import Typography from './Typography';
 import List from './List';
 import MenuPage from './Menu';
@@ -21,7 +21,6 @@ import CarouselPage from './Carousel';
 import BannerPage from './Banner';
 import CardPage from './Card';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 const Router = () => {
@@ -82,7 +81,6 @@ const Router = () => {
 const CustomDrawerContent: any = ({
   drawerPosition,
   navigation,
-  ...rest
 }: {
   drawerPosition: 'left' | 'right';
   navigation: any;

@@ -1,0 +1,38 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta, Props, Preview} from '@storybook/addon-docs/blocks';
+import {withKnobs, select, boolean} from '@storybook/addon-knobs';
+import {Menu, Icon, Button, Text} from '@devloops/react-native-variant';
+import {MenuProps} from './MenuProps.js';
+
+<Meta title="Components|Menu" />
+
+## Example Usage (coming soon)
+
+<br />
+
+```js dark
+<Menu
+  minWidth={180}
+  trigger={<Icon name="face" />}
+  render={({onDismiss}) => (
+    <>
+      <Button type="drawer" color="black" icon="check-all" onPress={onDismiss}>
+        item 1
+      </Button>
+      <Button type="drawer" color="black" icon="check-all" onPress={onDismiss}>
+        item 2
+      </Button>
+      <Button type="drawer" color="black" icon="check-all" onPress={onDismiss}>
+        item 3
+      </Button>
+    </>
+  )}
+/>
+```
+
+<Story name="Props">
+  <div>
+    <h2>Props</h2>
+    <Props of={MenuProps} />
+  </div>
+</Story>

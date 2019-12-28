@@ -40,12 +40,54 @@ const CardPage = () => {
             cache: 'force-cache',
           }}
         />
-        {cardContent}
-        {cardActions}
+        <Card.Content>
+          <Text variant="h5" transform="capitalize" gutterBottom={4}>
+            deneme
+          </Text>
+          <Text
+            variant="subtitle1"
+            weight="300"
+            contrast={1}
+            gutterBottom={16}
+            transform="capitalize">
+            deneme
+          </Text>
+          <Text variant="body2" lineBreakMode="clip">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+            quasi ratione enim error neque iure? Eos inventore autem earum
+            aliquid. Obcaecati autem doloribus sequi error expedita architecto
+            rem fugit non!
+          </Text>
+        </Card.Content>
+        <Card.Actions>
+          <Button onPress={() => {}}>Aksiyon 1</Button>
+          <Button onPress={() => {}}>Aksiyon 2</Button>
+        </Card.Actions>
       </Card>
       <Card elevation={4} margin={8}>
-        {cardContent}
-        {cardActions}
+        <Card.Content>
+          <Text variant="h5" transform="capitalize" gutterBottom={4}>
+            deneme
+          </Text>
+          <Text
+            variant="subtitle1"
+            weight="300"
+            contrast={1}
+            gutterBottom={16}
+            transform="capitalize">
+            deneme
+          </Text>
+          <Text variant="body2" lineBreakMode="clip">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+            quasi ratione enim error neque iure? Eos inventore autem earum
+            aliquid. Obcaecati autem doloribus sequi error expedita architecto
+            rem fugit non!
+          </Text>
+        </Card.Content>
+        <Card.Actions>
+          <Button onPress={() => {}}>Aksiyon 1</Button>
+          <Button onPress={() => {}}>Aksiyon 2</Button>
+        </Card.Actions>
       </Card>
       <Card
         elevation={1}
@@ -63,8 +105,56 @@ const CardPage = () => {
           />
         </View>
         <View style={{flex: 1, flexWrap: 'wrap'}}>
-          {cardContent2}
-          {cardActions2}
+          <Card.Content>
+            <Text
+              variant="h6"
+              weight="500"
+              transform="capitalize"
+              gutterBottom={4}>
+              deneme
+            </Text>
+            <Text
+              variant="subtitle2"
+              weight="300"
+              contrast={1}
+              transform="capitalize">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </Text>
+          </Card.Content>
+          <Card.Actions>
+            <IconButton icon="heart-outline" onPress={() => {}} />
+            <IconButton icon="comment-outline" onPress={() => {}} />
+            <View style={{flexGrow: 1}} />
+            <Menu
+              minWidth={180}
+              trigger={<Icon name="dots-vertical" />}
+              render={({onDismiss}) => (
+                <>
+                  <Button
+                    type="drawer"
+                    color="black"
+                    icon="check-all"
+                    onPress={onDismiss}>
+                    item 1
+                  </Button>
+                  <Button
+                    type="drawer"
+                    color="black"
+                    icon="check-all"
+                    onPress={onDismiss}>
+                    item 2
+                  </Button>
+                  <Button
+                    type="drawer"
+                    color="black"
+                    icon="check-all"
+                    onPress={onDismiss}>
+                    item 3
+                  </Button>
+                </>
+              )}
+            />
+          </Card.Actions>
         </View>
       </Card>
       <Card
@@ -83,8 +173,56 @@ const CardPage = () => {
           />
         </View>
         <View style={{flex: 1, flexWrap: 'wrap'}}>
-          {cardContent2}
-          {cardActions2}
+          <Card.Content>
+            <Text
+              variant="h6"
+              weight="500"
+              transform="capitalize"
+              gutterBottom={4}>
+              deneme
+            </Text>
+            <Text
+              variant="subtitle2"
+              weight="300"
+              contrast={1}
+              transform="capitalize">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </Text>
+          </Card.Content>
+          <Card.Actions>
+            <IconButton icon="heart-outline" onPress={() => {}} />
+            <IconButton icon="comment-outline" onPress={() => {}} />
+            <View style={{flexGrow: 1}} />
+            <Menu
+              minWidth={180}
+              trigger={<Icon name="dots-vertical" />}
+              render={({onDismiss}) => (
+                <>
+                  <Button
+                    type="drawer"
+                    color="black"
+                    icon="check-all"
+                    onPress={onDismiss}>
+                    item 1
+                  </Button>
+                  <Button
+                    type="drawer"
+                    color="black"
+                    icon="check-all"
+                    onPress={onDismiss}>
+                    item 2
+                  </Button>
+                  <Button
+                    type="drawer"
+                    color="black"
+                    icon="check-all"
+                    onPress={onDismiss}>
+                    item 3
+                  </Button>
+                </>
+              )}
+            />
+          </Card.Actions>
         </View>
       </Card>
     </ScrollView>

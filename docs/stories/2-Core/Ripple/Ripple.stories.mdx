@@ -1,0 +1,91 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta, Props, Preview} from '@storybook/addon-docs/blocks';
+import {withKnobs, select, boolean} from '@storybook/addon-knobs';
+import {Text, Surface,Ripple} from '@devloops/react-native-variant';
+import TextProps from './Ripple.js';
+
+<Meta title="Core|Ripple" />
+
+## Basic Usage
+
+<br />
+<br />
+<Ripple onPress={()=>console.log("Ripple is free")}>
+  <Surface>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+</Ripple>  
+<br />
+<Ripple onPress={()=>console.log("Ripple is free")} rippleColor="blue" >
+  <Surface padding={[16, 64]}>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+</Ripple>  
+<br />
+<Ripple onPress={()=>console.log("Ripple is free")} rippleColor="red" rippleOpacity={.4}>
+  <Surface margin={[16, 64]}>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+</Ripple>  
+<br/>
+<Ripple onPress={()=>console.log("Ripple is free")} rippleColor="red" rippleOpacity={.4} style={{borderRadius:8}} >
+  <Surface padding={[16, 16]} cornerRadius={18} elevation={4} style={{backgroundColor:"red"}} >
+  <Text color="white">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+</Ripple>  
+
+
+
+```js dark
+<Ripple onPress={()=>console.log("Ripple is free")}>
+  <Surface>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+</Ripple>  
+
+<Ripple onPress={()=>console.log("Ripple is free")} rippleColor="blue" >
+  <Surface padding={[16, 64]}>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+</Ripple>  
+
+<Ripple onPress={()=>console.log("Ripple is free")} rippleColor="red" rippleOpacity={.4}>
+  <Surface margin={[16, 64]}>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+</Ripple>  
+
+<Ripple onPress={()=>console.log("Ripple is free")} rippleColor="red" rippleOpacity={.4} style={{borderRadius:8}} >
+  <Surface padding={[16, 16]} cornerRadius={18} elevation={4} style={{backgroundColor:"red"}} >
+  <Text color="white">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+</Ripple>  
+
+```
+
+<br />
+<br />
+<br />
+
+
+
+### Props
+
+<Props of={TextProps} />
+...And Other View Props

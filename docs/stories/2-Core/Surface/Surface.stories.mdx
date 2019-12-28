@@ -1,0 +1,71 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta, Props, Preview} from '@storybook/addon-docs/blocks';
+import {withKnobs, select, boolean} from '@storybook/addon-knobs';
+import {Text, Surface} from '@devloops/react-native-variant';
+import TextProps from './Surface.js';
+
+<Meta title="Core|Surface" />
+
+## Basic Usage
+
+<br />
+<br />
+<Surface>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+<br />
+<Surface padding={[16, 64]}>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+<br />
+<Surface margin={[16, 64]}>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+
+```js dark
+<Surface>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+
+<Surface padding={[16,64]}>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+
+<Surface margin={[16,64]}>
+  <Text color="black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  </Text>
+</Surface>
+```
+
+<br />
+<br />
+<br />
+
+### Shadows
+
+<br />
+<br />
+<br />
+<Preview>
+  {Array(10)
+    .fill('')
+    .map((i, k) => (
+      <Surface padding={32} elevation={k} key={k} margin={[k + 2, 24]} />
+    ))}
+</Preview>
+
+### Props
+
+<Props of={TextProps} />
+...And Other View Props

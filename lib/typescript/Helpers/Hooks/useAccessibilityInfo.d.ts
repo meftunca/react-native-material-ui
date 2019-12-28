@@ -1,4 +1,2 @@
-export default function useAccessibilityInfo(): {
-    reduceMotionEnabled: boolean;
-    screenReaderEnabled: boolean;
-};
+declare let useAccessibilityInfo: () => any;
+export default useAccessibilityInfo;

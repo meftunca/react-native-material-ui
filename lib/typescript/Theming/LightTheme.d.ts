@@ -1,3 +1,3 @@
-import ThemeTypes from './ThemeTypes';
+import { ThemeTypes } from './ThemeTypes';
 declare const LightTheme: ThemeTypes;
 export default LightTheme;

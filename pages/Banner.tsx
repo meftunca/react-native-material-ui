@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {View} from 'react-native';
+import {View, ScrollView} from 'react-native';
 import {AppBar, Banner, useAlert, Button, useSnackbar} from './../src';
-import {ScrollView} from 'react-native-gesture-handler';
 const lorem = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. ';
 const BannerPage = ({}) => {
   const [visible, setVisible] = useState(false);
@@ -16,7 +15,7 @@ const BannerPage = ({}) => {
     <View>
       <AppBar>
         <AppBar.Action icon="menu" size={24} color="black" onPress={onOpen} />
-        <AppBar.Content primary="Başlık" secondary="Alt Başlık" />
+        <AppBar.Content title="Başlık" subtitle="Alt Başlık" />
         <AppBar.Action
           icon="arrow-left"
           size={24}

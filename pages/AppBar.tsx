@@ -1,17 +1,17 @@
 import React from 'react';
 import {View} from 'react-native';
-import {Text, Icon, BottomNavigation, AppBar, Palette} from './../src';
+import {Text, Icon, AppBar, Palette} from './../src';
 
 const AppBarPage = ({}) => {
   return (
     <View>
       <AppBar>
         <AppBar.Action icon="menu" size={24} color="black" />
-        <AppBar.Content primary="Başlık" secondary="Alt Başlık" />
+        <AppBar.Content title="Başlık" subtitle="Alt Başlık" />
         <AppBar.Action icon="arrow-left" size={24} color="black" />
       </AppBar>
       <AppBar
-        subChildren={props => (
+        subChildren={() => (
           <View
             style={{
               flexDirection: 'row',
@@ -24,7 +24,7 @@ const AppBarPage = ({}) => {
           </View>
         )}>
         <AppBar.Action icon="menu" size={24} />
-        <AppBar.Content primary="Alt Başlık Alanı" />
+        <AppBar.Content title="Alt Başlık Alanı" />
         <AppBar.Action icon="arrow-left" size={24} />
       </AppBar>
       <AppBar style={{flex: 1, flexDirection: 'column'}} color="purple">

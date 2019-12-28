@@ -30,8 +30,8 @@ export declare type Settings = {
     children?: React.ReactNode;
     onToggleAlert?: (status: boolean) => void | undefined;
     onToggleSnackbar?: (status: boolean) => void | undefined;
-    setAlert: (data: AlertType) => void;
-    setSnacbar: (data: SnackbarType) => void;
+    setAlert: (data: AlertType) => void | undefined;
+    setSnacbar: (data: SnackbarType) => void | undefined;
     isOpenSnacbar?: number;
 };
 export declare const Provider: React.FC<{

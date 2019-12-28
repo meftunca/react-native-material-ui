@@ -1,6 +1,6 @@
 import * as Palette from './Helpers/palette';
-export { Palette };
-export { default as Hooks } from './Helpers/Hooks';
+import * as Hooks from './Helpers/Hooks';
+export { Palette, Hooks };
 export { default as Text } from './Components/Core/Typography';
 export { default as Image } from './Components/Core/Image';
 export { default as Ripple } from './Components/Core/Ripple';
@@ -22,6 +22,6 @@ export { default as TextField } from './Components/TextField';
 export { default as Menu } from './Components/Menu';
 export { default as Card } from './Components/Card';
 export { default as Dialog } from './Components/Dialog';
-export { ThemeProvider, withTheme, LightTheme, DarkTheme, useTheme, ThemeTypes, } from './Theming';
+export * from './Theming';
 export { useAlert, useSnackbar } from './Theming/settings';
 export { default as Provider } from './Theming/Provider';

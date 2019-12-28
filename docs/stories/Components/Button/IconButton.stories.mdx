@@ -1,0 +1,43 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta,Props,Preview} from '@storybook/addon-docs/blocks';
+import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import {IconButton,FAB} from '@devloops/react-native-variant';
+import {Button as Btn} from './IconButtonProps';
+
+<Meta title='Components|Icon Button' component={IconButton}  />
+
+
+# Buttons
+
+<br/>
+<br/>
+
+
+## Icon Button
+
+<div style={{display:"flex",margin:36}}>
+    <IconButton color="teal" onPress={()=>console.log('clicked')} icon="face" />
+    <IconButton containerStyle={{marginLeft:36}} color="white" backgroundColor="red" onPress={()=>console.log('clicked')} icon="comment" size={36} />
+</div>
+
+
+```js dark
+
+<IconButton color="teal" onPress={()=>console.log('clicked')} icon="face" />
+<IconButton color="white" backgroundColor="red" onPress={()=>console.log('clicked')} icon="comment" size={36} />
+```
+
+<br/>
+<br/>
+
+## FAB(Floating Action Button)
+
+<div style={{display:"flex",margin:36}}>
+    <FAB color="teal" onPress={()=>console.log('clicked')} icon="face" />
+    <FAB containerStyle={{marginLeft:36}} color="white" backgroundColor="red" onPress={()=>console.log('clicked')} icon="comment" size={36} />
+</div>
+
+
+
+
+<Props of={Btn}/>

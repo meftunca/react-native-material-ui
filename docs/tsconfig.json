@@ -1,27 +1,39 @@
 {
   "compilerOptions": {
     "outDir": "build/lib",
-    "module": "commonjs",
+    "module": "es2015",
     "target": "es5",
-    "lib": ["es5", "es6", "es7", "es2017", "dom", "esNext"],
-    "sourceMap": true,
-    "allowJs": false,
+    "lib": ["es2018", "dom"],
     "jsx": "react",
     "moduleResolution": "node",
     "rootDirs": ["src", "stories"],
     "baseUrl": "src",
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
+    "importHelpers": true,
+    "noImplicitUseStrict": false,
     "declaration": true,
-    "allowSyntheticDefaultImports": true,
+    "declarationMap": false,
+    "noStrictGenericChecks": false,
+    "noUnusedParameters": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "strict": false,
+    "allowJs": false,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@devloops/react-native-variant": ["src/index.ts"]
+    }
   },
-  "include": ["src/**/*", "stories/**/*"],
-  "exclude": ["node_modules", "build", "scripts"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "scripts"],
+  "files": ["./.storybook/typings.d.ts"]
 }
