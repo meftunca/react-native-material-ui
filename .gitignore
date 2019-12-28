@@ -4,6 +4,8 @@
 
 # Xcode
 #
+android/
+ios/
 ios/build/
 android/build/
 ios/**/build/
