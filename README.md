@@ -6,6 +6,10 @@
     npm install @devloops/react-native-variant
 ```
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 03b97f5ea96af70f5e7391723ec905588045b2e5
 # Getting Started
 
 <p style={{fontSize: 20}}>
