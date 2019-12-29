@@ -19,9 +19,7 @@
     "strict": false,
     "target": "esnext",
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
-    "noEmit": false
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "exclude": [

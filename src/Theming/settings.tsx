@@ -81,13 +81,18 @@ export const Provider: React.FC<{value?: Settings}> = ({children}) => {
   }, [setSnacbar || setAlert]);
   return (
     <SettingsContext.Provider value={value}>
-      {children}
-      {alertData && (
-        <Alert {...alertData} onDismiss={() => onToggleAlert(false)} />
-      )}
-      {snackbarData && (
-        <Snackbar {...snackbarData} onDismiss={() => onToggleSnackbar(false)} />
-      )}
+      <>
+        {children}
+        {alertData && (
+          <Alert {...alertData} onDismiss={() => onToggleAlert(false)} />
+        )}
+        {snackbarData && (
+          <Snackbar
+            {...snackbarData}
+            onDismiss={() => onToggleSnackbar(false)}
+          />
+        )}
+      </>
     </SettingsContext.Provider>
   );
 };

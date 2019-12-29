@@ -169,6 +169,7 @@ const TextFieldFlat: React.FC<TextFieldFlatProps> = ({
       flexGrow: 1,
       height: '100%',
       fontSize: 16,
+      marginHorizontal: 6,
       color: Palette.grey700,
       minHeight: 28,
     },

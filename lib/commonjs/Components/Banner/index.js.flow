@@ -26,7 +26,6 @@ const BannerWrapper: React.FC<BannerProps> = ({
   delay = 0,
 }) => {
   const {onLayout, height} = useLayout();
-  const [mount, setMount] = useState(false);
   const animatedValue = useAnimation({
     type: 'timing',
     initialValue: 0,
@@ -39,19 +38,10 @@ const BannerWrapper: React.FC<BannerProps> = ({
     // useNativeDriver: true,
   });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setMount(true);
-    }, duration);
-  }, []);
-
-  const translateEffect: any =
-      mount === false
-        ? -height || -400
-        : animatedValue.interpolate({
-            inputRange: [0, 1],
-            outputRange: [-height, 0],
-          }),
+  const translateEffect: any = animatedValue.interpolate({
+      inputRange: [0, 1],
+      outputRange: [height < 10 ? -400 : -height, 0],
+    }),
     marginBottom: any = animatedValue.interpolate({
       inputRange: [0, 1],
       outputRange: [0, 10],
@@ -67,7 +57,6 @@ const BannerWrapper: React.FC<BannerProps> = ({
             marginTop: translateEffect,
             backgroundColor: 'white',
             marginBottom,
-            ...elevationShadowStyle(visible ? 2 : 0),
           },
         ]}>
         <View style={styles.textContent}>

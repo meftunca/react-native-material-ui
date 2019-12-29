@@ -177,7 +177,7 @@ const TextFieldOutlined: React.FC<TextFieldOutlinedProps> = ({
       height: '100%',
       fontSize: 16,
       color: Palette.grey700,
-      // paddingVertical: 8,
+      marginHorizontal: 8,
       minHeight: 28,
       // backgroundColor: 'rgba(0,0,0,.1)',
     },

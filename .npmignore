@@ -11,6 +11,8 @@ android
 ios
 docs
 docs/node_modules
+documentation
+documentation/node_modules
 e2e
 app.json
 App.tsx

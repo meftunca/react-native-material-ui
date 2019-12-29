@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
 import {Animated, Easing, View} from 'react-native';
-import {useLayout} from '../../Helpers/Hooks';
+import {useLayout, useAnimation} from '../../Helpers/Hooks';
 
 interface CollapseProps {
   expanded?: boolean;
@@ -19,30 +19,26 @@ const Collapse: React.FC<CollapseProps> = ({
   type = 'position',
   ...rest
 }) => {
-  const collapse = useRef(new Animated.Value(expanded ? 1 : 0)).current;
-  const [mount, setMount] = useState(false);
+  const collapse = useAnimation({
+    type: 'timing',
+    toValue: expanded ? 1 : 0,
+    initialValue: 0,
+    easing: easyFunc || Easing.inOut(Easing.cubic),
+    duration,
+    delay,
+  });
   const contentLayout = useLayout();
-  useEffect(() => {
-    setTimeout(() => {
-      setMount(true);
-    }, duration);
-  }, []);
-  useEffect(() => {
-    if (mount)
-      Animated.timing(collapse, {
-        toValue: expanded === true ? 1 : 0,
-        easing: easyFunc || Easing.inOut(Easing.cubic),
-        duration,
-        delay,
-      }).start();
-  }, [expanded]);
+  console.log('contentLayout.height', contentLayout.height);
   const interpolateHeight = collapse.interpolate({
       inputRange: [0, 1],
       outputRange: [0, contentLayout.height],
     }),
     interpolatePosition = collapse.interpolate({
       inputRange: [0, 1],
-      outputRange: [-contentLayout.height, 0],
+      outputRange: [
+        contentLayout.height < 5 ? -1000 : -contentLayout.height,
+        0,
+      ],
     });
   return (
     <View

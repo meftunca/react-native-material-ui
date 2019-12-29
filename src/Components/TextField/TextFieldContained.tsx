@@ -97,12 +97,13 @@ const TextFieldContained: React.FC<TextFieldContainedProps> = ({
       onChange && onChange(prop);
     };
 
-  let borderWidth = disabled ? 1.5 : 1,
+  let borderWidth = disabled ? 1.5 : 2,
+    colors = state.active ? Palette.blue500 : Palette.grey700,
     variantStyle = {
-      backgroundColor: '#fff',
+      backgroundColor: 'rgba(0, 0, 0, 0.09)',
+      elevation: 2,
       borderTopLeftRadius: 4,
       borderTopRightRadius: 4,
-      elevation: 2,
       paddingTop: 4,
       borderBottomWidth: borderWidth,
     },
@@ -114,8 +115,7 @@ const TextFieldContained: React.FC<TextFieldContainedProps> = ({
     labelLocationTranslateY = labelAnim.interpolate({
       inputRange: [0, 1],
       outputRange: labelPosArr,
-    }),
-    colors = state.active ? Palette.blue500 : Palette.grey700;
+    });
   colors = error
     ? Palette.red500
     : warning
@@ -130,9 +130,8 @@ const TextFieldContained: React.FC<TextFieldContainedProps> = ({
       margin: 8,
     },
     wrapper: {
-      borderBottomColor: colors,
-      borderBottomWidth: 3,
       paddingHorizontal: 12,
+      borderColor: colors,
     },
     contentWrapper: {
       flexDirection: 'row',
@@ -176,6 +175,7 @@ const TextFieldContained: React.FC<TextFieldContainedProps> = ({
       fontSize: 16,
       color: Palette.grey700,
       minHeight: 28,
+      marginHorizontal: 6,
     },
     bottomWrapper: {
       flexDirection: 'row',

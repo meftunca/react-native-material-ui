@@ -17,7 +17,7 @@ const BannerPage = ({}) => {
         <AppBar.Action icon="menu" size={24} color="black" onPress={onOpen} />
         <AppBar.Content title="Başlık" subtitle="Alt Başlık" />
         <AppBar.Action
-          icon="arrow-left"
+          icon="arrow-back"
           size={24}
           color="black"
           onPress={() => setVisible(!visible)}
@@ -25,7 +25,14 @@ const BannerPage = ({}) => {
       </AppBar>
       <Banner
         visible={visible}
-        actions={[{label: 'Fix It', onPress: () => {}}]}
+        actions={[
+          {
+            label: 'Fix It',
+            onPress: () => {
+              setVisible(!visible);
+            },
+          },
+        ]}
         contentText={lorem}
       />
       <ScrollView>

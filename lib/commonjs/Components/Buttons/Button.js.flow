@@ -175,6 +175,8 @@ export const Button = ({
                     type === 'button' && variant === 'contained'
                       ? Color(textColor).isDark()
                         ? 'white'
+                        : themeControl.dark
+                        ? 'white'
                         : textColor
                       : textColor
                   }>

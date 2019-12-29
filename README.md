@@ -1,18 +1,6 @@
 # react-native-variant
 
-```shell
-    yarn add @devloops/react-native-variant
-
-    npm install @devloops/react-native-variant
-```
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 03b97f5ea96af70f5e7391723ec905588045b2e5
-# Getting Started
-
-<p style={{fontSize: 20}}>
+<p style="font-size:20px">
   React Native Variant provides a highly developed structure based on a material
   design pattern.
 </p>
