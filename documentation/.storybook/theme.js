@@ -3,7 +3,7 @@ import {create} from '@storybook/theming/create';
 const version = require('./../../package.json');
 export default create({
   base: 'light',
-  brandTitle: `<div style="display:flex;align-content:center;flex-direction:column; margin-bottom:24px"><img src="https://raw.githubusercontent.com/meftunca/react-native-variant/master/docs/public/storybook.png" width="80" height="80" /><br/><h2>React Native Variant\nMaterial UI</h2><br/><b>Version: ${version.version}</b></div>`,
+  brandTitle: `<div style="display:flex;align-content:center;flex-direction:column; margin-bottom:24px"><img src="https://raw.githubusercontent.com/meftunca/react-native-variant/master/documentation/public/storybook.png" width="80" height="80" /><br/><h2>React Native Variant\nMaterial UI</h2><br/><b>Version: ${version.version}</b></div>`,
   // brandImage: '/brand.png',
   // brandTitle: 'React Native Variant Material UI',
   brandUrl: 'https://meftunca.github.io/react-native-variant',
