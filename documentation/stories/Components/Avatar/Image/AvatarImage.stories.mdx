@@ -1,0 +1,126 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta, Props, Preview} from '@storybook/addon-docs/blocks';
+import {withKnobs, select, boolean} from '@storybook/addon-knobs';
+import {IconButton, List, Avatar, Palette, FAB, Surface} from '@devloops/react-native-variant';
+import {AvatarImageProps} from "./AvatarImageProps.js"
+
+
+<Meta title="Components|Avatar/Image" component={IconButton} />
+
+## Basic Usage
+
+<br/>
+
+
+<Story name="Basic">
+  <Avatar.Image
+    size={48}
+     source={{
+        uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+        cache: 'force-cache',
+    }}
+    backgroundColor={Palette.orange500}
+  />
+</Story>
+
+```js dark
+<Avatar.Text
+  size={32}
+   source={{
+        uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+        cache: 'force-cache',
+    }}
+  backgroundColor={Palette.orange500}
+/>
+```
+
+## With Elevation Usage
+
+<br/>
+
+
+<Story name="Elevation">
+  <Avatar.Image
+    size={60}
+     source={{
+        uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+        cache: 'force-cache',
+    }}
+    backgroundColor={Palette.orange500}
+    elevation={4}
+  />
+</Story>
+
+```js dark
+<Avatar.Text
+  size={32}
+   source={{
+        uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+        cache: 'force-cache',
+    }}
+  backgroundColor={Palette.orange500}
+  elevation={4}
+/>
+```
+
+## With Size Usage
+
+<br/>
+
+<Story name="size">
+  <div style={{display:"inline-flex",justifyContent:"space-around"}}>
+      <Avatar.Image
+        size={40}
+         source={{
+        uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+        cache: 'force-cache',
+    }}
+        backgroundColor={Palette.orange500}
+        elevation={4}
+      />
+      <Avatar.Image
+        size={60}
+         source={{
+        uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+        cache: 'force-cache',
+    }}
+        backgroundColor={Palette.red500}
+        elevation={4}
+      />
+      <Avatar.Image
+        size={80}
+         source={{
+        uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+        cache: 'force-cache',
+    }}
+        backgroundColor={Palette.green500}
+        elevation={4}
+      />
+      <Avatar.Image
+        size={120}
+         source={{
+        uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+        cache: 'force-cache',
+    }}
+        backgroundColor={Palette.indigo500}
+        elevation={4}
+      />
+  </div>
+</Story>
+
+```js dark
+<Avatar.Text
+  size={60}
+   source={{
+        uri: 'http://endlesstheme.com/Endless1.5.1/img/user2.jpg',
+        cache: 'force-cache',
+    }}
+  backgroundColor={Palette.orange500}
+  elevation={4}
+/>
+```
+<Story name="props">
+    <h4>Props</h4>
+</Story>    
+
+<Props of={AvatarImageProps}/>

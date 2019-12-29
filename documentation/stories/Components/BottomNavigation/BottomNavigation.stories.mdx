@@ -1,0 +1,59 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta, Props, Preview} from '@storybook/addon-docs/blocks';
+import {withKnobs, select, boolean} from '@storybook/addon-knobs';
+import {BottomNavigation, Surface, Text} from '@devloops/react-native-variant';
+import {
+  BottomNavigationProps,
+  BottomNavigationActionProps,
+} from './BottomNavigationProps.js';
+
+<Meta title="Components|BottomNavigation" />
+
+## Example Usage
+
+
+<Preview>
+<Story name="usage">
+    <Surface elevation={3} style={{height:"100%",flex:1,flexGrow:1,minHeight:500}} >
+      <BottomNavigation
+        actions={[
+          {
+            label: 'Home',
+            icon: 'timer',
+            sceneKey: 'Home',
+          },
+          {
+            label: 'Music',
+            icon: 'music_video',
+            sceneKey: 'Music',
+          },
+          {
+            label: 'About',
+            icon: 'info',
+            sceneKey: 'About',
+          },
+        ]}
+        scenes={[
+          {key: 'Home', Scene: () => <Text>Home Page</Text>},
+          {key: 'Music', Scene: () => <Text>Music Page</Text>},
+          {key: 'About', Scene: () => <Text>About Page</Text>},
+        ]}
+        config={{
+          labelHidden: true,
+        }}
+        onChangeScene={({sceneKey}) => {
+          console.log('sceneKey', sceneKey);
+        }}
+      />
+    </Surface>
+  </Story>
+</Preview>  
+
+
+<div>
+  <h2>Props</h2>
+  <h3>BottomNavigation Props</h3>
+  <Props of={BottomNavigationProps} />
+  <h3>BottomNavigation Action Props</h3>
+  <Props of={BottomNavigationActionProps} />
+</div>

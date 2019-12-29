@@ -1,0 +1,56 @@
+import {action} from '@storybook/addon-actions';
+import {Story, Meta, Props, Preview} from '@storybook/addon-docs/blocks';
+import {withKnobs, select, boolean} from '@storybook/addon-knobs';
+import {
+  TextField,
+  IconButton,
+  Icon,
+  Palette,
+} from '@devloops/react-native-variant';
+import {FormFieldProps} from './TextField.js';
+import {View} from 'react-native';
+
+<Meta title="Components|Form/TextField" />
+
+## TextField.Flat
+
+<Preview>
+  <Story name="Flat">
+    <TextField.Flat
+      label="TextField.Flat"
+      Left={props => <Icon name="comment" {...props} />}
+      style={{outline: 'none', flex: 1, marginHorizontal: 4}}
+      Right={props => <Icon {...props} name="visibility" />}
+    />
+  </Story>
+</Preview>
+
+## TextField.Outlined
+
+<Preview>
+  <Story name="Outlined">
+    <TextField.Outlined
+      label="TextField.Outlined"
+      Left={props => <Icon name="comment" {...props} />}
+      style={{outline: 'none', flex: 1, marginHorizontal: 4}}
+      Right={props => <Icon {...props} name="visibility" />}
+    />
+  </Story>
+</Preview>
+
+## TextField.Contained
+
+<Preview>
+  <Story name="Contained">
+    <TextField.Contained
+      style={{outline: 'none', flex: 1, marginHorizontal: 4}}
+      label="TextField.Contained"
+      success
+      helperText="Good"
+    />
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={FormFieldProps} />
