@@ -4,10 +4,10 @@
 
 # Xcode
 #
-android
-ios
-docs/
+android/
+ios/
 lib/
+build/
 documentation/node_modules
 *.pbxuser
 !default.pbxuser
