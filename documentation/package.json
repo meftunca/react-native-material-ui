@@ -78,7 +78,7 @@
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.57.0",
     "module-alias": "^2.2.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "raw-loader": "^4.0.0",
     "react-app-rewired": "^2.1.5",
     "react-docgen-typescript-loader": "^3.6.0",
